@@ -18,6 +18,7 @@ public class VariablePractice2 {
 		System.out.println("나누기 결과 : " + (i / m));
 		
 		sc.close();
+		
 	}
 
 }

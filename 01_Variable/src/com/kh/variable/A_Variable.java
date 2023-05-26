@@ -136,11 +136,11 @@ public class A_Variable {
 		// 1) 같은 영역내에 중복된 이름 안 됨!
 		int numBer; // 이건 된다. 자바는 대소문자를 구별한다.
 		// 2) 예약어(자바에서 사용되고 있는 키워드) 안 된다.
-		int true;
-		int abstract;
-		int class;
-		int static;
-		int public;
+		//int true;
+		//int abstract;
+		//int class;
+		//int static;
+		//int public;
 		// 3) 숫자 사용가능하나(단, 숫자로 시작하는건 안 됨)
 		int number1;
 		int num1ber;

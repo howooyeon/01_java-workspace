@@ -13,7 +13,6 @@ public class VariablePractice3 {
 		System.out.println("면적 : " + (garo * sero));
 		System.out.println("둘레 : " + (garo + sero) * 2);
 		
-		sc.close();
 
 	}
 }

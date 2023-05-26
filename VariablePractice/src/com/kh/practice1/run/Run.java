@@ -20,6 +20,7 @@ public class Run {
 		VariablePractice4 p4 = new VariablePractice4();
 		p4.printVariable4();
 		
+		
 	}
 
 }
