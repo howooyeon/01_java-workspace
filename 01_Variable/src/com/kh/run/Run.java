@@ -20,6 +20,7 @@ public class Run {
 		C_Printf c = new C_Printf();
 		//c.printfTest();
 		D_Cast d = new D_Cast();
-		d.autoCasting();
+		//d.autoCasting();
+		d.forceCasting();
 	}
 }
