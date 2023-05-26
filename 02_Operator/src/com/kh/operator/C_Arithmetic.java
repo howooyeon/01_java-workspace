@@ -35,7 +35,7 @@ public class C_Arithmetic {
 		int c = (++a) + b; // a=6, b=10, c=16
 		int d = c / a; // c=16, d=2
 		int e = c % a; // e=4
-		int f = e++; // e4(5), f=4
+		int f = e++; // e = 4(5), f=4
 		int g = (--b) + (d--); // b=9, c=16, d=1, e=5, f=4, g =11, h=2
 		int h = 2;// h=2
 		int i = (a++) + b / (--c / f) * (g-- - d) % (++e + h);
