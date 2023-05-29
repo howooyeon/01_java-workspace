@@ -40,7 +40,15 @@ public class C_Arithmetic {
 		int h = 2;// h=2
 		int i = (a++) + b / (--c / f) * (g-- - d) % (++e + h);
 
-		System.out.printf("%d, %d, %d, %d, %d, %d, %d, %d, %d", a, b, c, d, e, f, g, h, i);
+		System.out.println("a : " + a);
+		System.out.println("b : " + b);
+		System.out.println("c : " + c);
+		System.out.println("d : " + d);
+		System.out.println("e : " + e);
+		System.out.println("f : " + f);
+		System.out.println("g : " + g);
+		System.out.println("h : " + h);
+		System.out.println("i : " + i);
 
 	}
 }
