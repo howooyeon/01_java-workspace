@@ -55,7 +55,7 @@ public class OperatorPractice {
 
 	}
 
-	public void practice05() {
+	public void practice5() {
 		// 키보드로 입력 받은 값들을 변수에 기록하고 저장된 변수 값을 화면에 출력하여 확인하세요.
 		// 이 때 성별이 ‘M’이면 남학생, ‘M’이 아니면 여학생으로 출력 처리 하세요
 		Scanner sc = new Scanner(System.in);
@@ -83,7 +83,7 @@ public class OperatorPractice {
 
 	}
 
-	public void practice06() {
+	public void practice6() {
 		// 나이를 키보드로 입력 받아 어린이(13세 이하)인지, 청소년(13세 초과 ~ 19세 이하)인지, 
 		// 성인(19세 초과)인지 출력하세요
 		
@@ -93,7 +93,7 @@ public class OperatorPractice {
 		System.out.print( age <= 13 ? "어린이" : ( age <= 19 ? "청소년" : "성인" ));
 	}
 
-	public void practice07() {
+	public void practice7() {
 		Scanner sc = new Scanner(System.in);
 		/* 국어, 영어, 수학에 대한 점수를 키보드를 이용해 정수로 입력 받고, 
 		세 과목에 대한 합계(국어+영어+수학)와 평균(합계/3.0)을 구하세요.
@@ -117,16 +117,71 @@ public class OperatorPractice {
 		
 	}
 	
-	public void practice08() {
+	public void practice8() {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("주민번호를 입력하세요(- 포함) : ");
+		System.out.print("주민번호를 입력하세요(-포함) : ");
 		char idCardNumber = sc.nextLine().charAt(7);
 		System.out.println(" ");
 		
 		System.out.println(idCardNumber % 2 == 0 ? "여자" : "남자" );
 	} 
 	
-	public void practice09() {
+	public void practice9() {
+		/*
+		    키보드로 정수 두 개를 입력 받아 각각 변수(num1, num2)에 저장하세요.
+			그리고 또 다른 정수를 입력 받아 그 수가 num1 이하거나 num2 초과이면 true를 출력하고
+			아니면 false를 출력하세요.
+			(단, num1은 num2보다 작아야 함) 
+		 */
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("정수 1 : ");
+		int num1 = sc.nextInt();
+		System.out.print("정수 2 : ");
+		int num2 = sc.nextInt();
+		System.out.print("입력 : ");
+		int input = sc.nextInt();
+		System.out.println(" ");
+		
+		System.out.print( input <= num1 || input > num2 );
+		
+	}
+	
+	public void practice10() {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("정수 1 : ");
+		int num1 = sc.nextInt();
+		System.out.print("정수 2 : ");
+		int num2 = sc.nextInt();
+		System.out.print("정수 3 : ");
+		int num3 = sc.nextInt();
+		
+		System.out.print( num1 == num2 && num1 == num3 && num2 == num3 );
+			
+	}
+	
+	public void practice11() {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("A사원의 연봉 : ");
+		int a = sc.nextInt();
+		System.out.print("B사원의 연봉 : ");
+		int b = sc.nextInt();
+		System.out.print("C사원의 연봉 : ");
+		int c = sc.nextInt();
+		
+		
+		double totalA = a * 1.4;
+		double totalB = b * 1;
+		double totalC = c * 1.15;
+		System.out.println(" ");
+		
+		System.out.println("A사원의 연봉/연봉+a : " + a + "/" + totalA);
+		System.out.println(totalA >= 3000 ? "3000 이상" : "3000 미만");
+		System.out.println("B사원의 연봉/연봉+a : " + b + "/" + totalB);
+		System.out.println(totalB >= 3000 ? "3000 이상" : "3000 미만");
+		System.out.println("C사원의 연봉/연봉+a : " + c + "/" + totalC);
+		System.out.println(totalC >= 3000 ? "3000 이상" : "3000 미만");
 		
 	}
 }
