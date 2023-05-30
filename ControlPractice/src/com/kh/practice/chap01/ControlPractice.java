@@ -190,7 +190,7 @@ public class ControlPractice {
 		sc.nextLine();
 		System.out.print("연산자를 입력(+,-,*,/,%) : ");
 		char op = sc.nextLine().charAt(0);
-		
+
 		if (op == '+') {
 			System.out.println(num1 + " + " + num2 + " = " + (num1 + num2));
 		} else if (op == '-') {
@@ -198,12 +198,81 @@ public class ControlPractice {
 		} else if (op == '*') {
 			System.out.println(num1 + " * " + num2 + " = " + (num1 * num2));
 		} else if (op == '/') {
-			double result = (double) num1/num2; // 대박 !
+			double result = (double) num1 / num2; // 대박 !
 			System.out.printf("%d %c %d = %.6f", num1, op, num2, result);
 		} else if (op == '%') {
 			System.out.println(num1 + " % " + num2 + " = " + (num1 % num2));
 		}
 
+	}
+
+	public void practice9() {
+
+		Scanner sc = new Scanner(System.in);
+		System.out.print("중간 고사 점수  : ");
+		int mid = sc.nextInt();
+		System.out.print("기말 고사 점수  : ");
+		int fin = sc.nextInt();
+		System.out.print("과제 점수  : ");
+		int assign = sc.nextInt();
+		System.out.print("출석 점수  : ");
+		int attend = sc.nextInt();
+
+		System.out.println("=============결과=============");
+
+		System.out.println("중간고사 점수(20) : " + mid * 0.2);
+		System.out.println("기말고사 점수(30) : " + fin * 0.3);
+		System.out.println("과제 점수		(30) : " + assign * 0.3);
+		System.out.println("과제 점수		(20) : " + (double) attend);
+		double total = ((mid * 0.2) + (fin * 0.3) + (assign * 0.3) + attend);
+		System.out.println("총점 : " + total);
+
+		if (total >= 70 && attend >= 14) {
+			System.out.println("PASS");
+		} else {
+			System.out.println("Fail [점수 미달]");
+		}
+	}
+	
+	public void practice10() {
+		
+		System.out.println("1. 메뉴 출력");
+		System.out.println("2. 짝수/홀수");
+		System.out.println("3. 합격/불합격");
+		System.out.println("4. 계절");
+		System.out.println("5. 로그인");
+		System.out.println("6. 권한 확인");
+		System.out.println("7. BMI");
+		System.out.println("8. 계산기");
+		System.out.println("7. P/F");
+		System.out.print("선택 : ");
+		
+		
+		Scanner sc = new Scanner(System.in);
+		int num = sc.nextInt();
+		
+		switch(num){
+		case 1:
+			practice1(); break;
+		case 2:
+			practice2(); break;
+		case 3:
+			practice3(); break;
+		case 4:
+			practice4(); break;
+		case 5:
+			practice5(); break;
+		case 6:
+			practice6(); break;
+		case 7:
+			practice7(); break;
+		case 8:
+			practice8(); break;
+		case 9:
+			practice9(); break;
+		}
+		
+		sc.close();		
 	}
 
 }
