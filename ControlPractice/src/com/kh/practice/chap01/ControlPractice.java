@@ -1,0 +1,174 @@
+package com.kh.practice.chap01;
+
+import java.util.Scanner;
+
+public class ControlPractice {
+	public void practice1() {
+
+		System.out.println("1. 입력");
+		System.out.println("2. 수정");
+		System.out.println("3. 조회");
+		System.out.println("4. 삭제");
+		System.out.println("7. 종료");
+
+		Scanner sc = new Scanner(System.in);
+		System.out.print("메뉴 번호를 입력하세요 : ");
+		int num = sc.nextInt();
+		switch (num) {
+		case 1:
+			System.out.println("입력 메뉴입니다.");
+			break;
+		case 2:
+			System.out.println("수정 메뉴입니다.");
+			break;
+		case 3:
+			System.out.println("조회 메뉴입니다.");
+			break;
+		case 4:
+			System.out.println("삭제 메뉴입니다.");
+		case 7:
+			System.out.println("프로그램이 종료됩니다.");
+			break;
+		}
+
+	}
+
+	public void practice2() {
+		/*
+		 * 스캐너. 정수받기 if 양수 if 짝수 ( i % 2 == 0) 짝수다 출력 else 양수 아니먄 양수만 입력해주세요 출력
+		 */
+
+		Scanner sc = new Scanner(System.in);
+		System.out.print("숫자를 한 개 입력하세요 : ");
+		int num = sc.nextInt();
+
+		if (num > 0) {
+			if (num % 2 == 0) {
+				System.out.println("짝수다");
+			} else {
+				System.out.println("홀수다");
+			}
+
+		} else
+			System.out.println("양수만 입력해주세요.");
+	}
+
+	public void practice3() {
+
+		/*
+		 * 국어, 영어, 수학 세 과목의 점수를 키보드로 입력 받고 합계와 평균을 계산하고 합계와 평균을 이용하여 합격 / 불합격 처리하는 기능을
+		 * 구현하세요. (합격 조건 : 세 과목의 점수가 각각 40점 이상이면서 평균이 60점 이상일 경우) 합격 했을 경우 과목 별 점수와 합계,
+		 * 평균, “축하합니다, 합격입니다!”를 출력하고 불합격인 경우에는 “불합격입니다.”를 출력하세요.
+		 */
+
+		Scanner sc = new Scanner(System.in);
+		System.out.print("국어점수 : ");
+		int korean = sc.nextInt();
+		System.out.print("수학점수 : ");
+		int math = sc.nextInt();
+		System.out.print("영어점수 : ");
+		int english = sc.nextInt();
+
+		int total = korean + math + english;
+		double average = total / 3;
+
+		if (korean >= 40 && english >= 40 && math >= 40 && average >= 60) {
+			System.out.println("국어점수 : " + korean);
+			System.out.println("수학점수 : " + math);
+			System.out.println("영어점수 : " + english);
+			System.out.println("합계 : " + total);
+			System.out.println("평균 : " + average);
+			System.out.println("축하합니다. 합격입니다!");
+		} else
+			System.out.println("불합격입니다.");
+	}
+
+	public void practice4() {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("1~12 사이의 정수 입력 : ");
+		int month = sc.nextInt();
+
+		switch (month) {
+		case 3:
+		case 4:
+		case 5:
+			System.out.println(month + "월은 봄입니다.");
+			break;
+		case 6:
+		case 7:
+		case 8:
+			System.out.println(month + "월은 여름입니다.");
+			break;
+		case 9:
+		case 10:
+		case 11:
+			System.out.println(month + "월은 가을입니다.");
+			break;
+		case 12:
+		case 1:
+		case 2:
+			System.out.println(month + "월은 겨울입니다.");
+			break;
+		default:
+			System.out.println(month + "월은 잘못 입력된 달입니다.");
+		}
+
+	}
+
+	public void practice5() {
+		/*
+		 * 아이디, 비밀번호를 정해두고 로그인 기능을 작성하세요. 로그인 성공 시 “로그인 성공”, 아이디가 틀렸을 시 “아이디가 틀렸습니다.“,
+		 * 비밀번호가 틀렸을 시 “비밀번호가 틀렸습니다.”를 출력하세요.
+		 */
+		String ID = "hoyeonLEE";
+		String password = "12345678";
+
+		Scanner sc = new Scanner(System.in);
+		// 2개의 String을 입력 받겠다는
+		System.out.print("아이디 : ");
+		String IDin = sc.next();
+		System.out.print("비밀번호 : ");
+		String Passwordin = sc.next();
+
+		if (IDin.equals(ID) && Passwordin.equals(password)) {
+			System.out.print("로그인 성공");
+		} else {
+			System.out.print("로그인 실패");
+		}
+	}
+	public void practice6() {
+		/*단, 관리자는 회원관리, 게시글 관리, 게시글 작성, 게시글 조회, 댓글 작성이 가능하고
+		회원은 게시글 작성, 게시글 조회, 댓글 작성이 가능하고
+		비회원은 게시글 조회만 가능합니다.
+		ex.
+		권한을 확인하고자 하는 회원 등급 : 관리자
+		회원관리, 게시글 관리 게시글 작성, 댓글 작성 게시글 조회*/
+		
+
+	}
+
+	public void practice7() {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("키(m)를 입력해주세요 : ");
+		double height = sc.nextDouble();
+		System.out.print("몸무게(kg)를 입력해주세요 : ");
+		double weight = sc.nextDouble();
+
+		double BMI = weight / (height * height);
+		System.out.println("BMI 지수 : " + BMI);
+
+		if (BMI < 18.5) {
+			System.out.println("저체중");
+		} else if (BMI >= 18.5 && BMI < 23) {
+			System.out.println("정상체중");
+		} else if (BMI >= 23 && BMI < 25) {
+			System.out.println("과체중");
+
+		} else if (BMI >= 25 && BMI < 30) {
+			System.out.println("비만");
+
+		} else {
+			System.out.println("고도비만");
+		}
+	}
+}
