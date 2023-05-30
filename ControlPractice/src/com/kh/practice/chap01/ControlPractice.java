@@ -136,15 +136,24 @@ public class ControlPractice {
 			System.out.print("로그인 실패");
 		}
 	}
-	public void practice6() {
-		/*단, 관리자는 회원관리, 게시글 관리, 게시글 작성, 게시글 조회, 댓글 작성이 가능하고
-		회원은 게시글 작성, 게시글 조회, 댓글 작성이 가능하고
-		비회원은 게시글 조회만 가능합니다.
-		ex.
-		권한을 확인하고자 하는 회원 등급 : 관리자
-		회원관리, 게시글 관리 게시글 작성, 댓글 작성 게시글 조회*/
-		
 
+	public void practice6() {
+		/*
+		 * 단, 관리자는 회원관리, 게시글 관리, 게시글 작성, 게시글 조회, 댓글 작성이 가능하고 회원은 게시글 작성, 게시글 조회, 댓글 작성이
+		 * 가능하고 비회원은 게시글 조회만 가능합니다. ex. 권한을 확인하고자 하는 회원 등급 : 관리자 회원관리, 게시글 관리 게시글 작성, 댓글
+		 * 작성 게시글 조회
+		 */
+
+		Scanner sc = new Scanner(System.in);
+		System.out.print("권한을 확인하고자 하는 회원 등급 : ");
+		String level = sc.nextLine();
+		if (level.equals("관리자")) {
+			System.out.println("회원관리, 게시글 관리 게시글 작성, 댓글 작성 게시글 조회");
+		} else if (level.equals("회원")) {
+			System.out.println("게시글 작성, 게시글 조회, 댓글 작성");
+		} else {
+			System.out.println("게시글 조회");
+		}
 	}
 
 	public void practice7() {
@@ -171,4 +180,30 @@ public class ControlPractice {
 			System.out.println("고도비만");
 		}
 	}
+
+	public void practice8() {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("피연산자1 입력 : ");
+		int num1 = sc.nextInt();
+		System.out.print("피연산2 입력 : ");
+		int num2 = sc.nextInt();
+		sc.nextLine();
+		System.out.print("연산자를 입력(+,-,*,/,%) : ");
+		char op = sc.nextLine().charAt(0);
+		
+		if (op == '+') {
+			System.out.println(num1 + " + " + num2 + " = " + (num1 + num2));
+		} else if (op == '-') {
+			System.out.println(num1 + " - " + num2 + " = " + (num1 - num2));
+		} else if (op == '*') {
+			System.out.println(num1 + " * " + num2 + " = " + (num1 * num2));
+		} else if (op == '/') {
+			double result = (double) num1/num2; // 대박 !
+			System.out.printf("%d %c %d = %.6f", num1, op, num2, result);
+		} else if (op == '%') {
+			System.out.println(num1 + " % " + num2 + " = " + (num1 % num2));
+		}
+
+	}
+
 }

@@ -309,17 +309,15 @@ public class A_For {
 
 		for (int dan = 2; dan <= 9; dan++) {
 			for (int gugu = 1; gugu <= 9; gugu++) {
-				System.out.printf("%d X %d = %d\n"+ "", dan, gugu, dan * gugu);
+				System.out.printf("%d X %d = %d\n" + "", dan, gugu, dan * gugu);
 			}
-			System.out.println(); 
-		}
-
-	}
-	
-	public void method18() {
-		for(; ;) // 조건식 자리 략시 기본적으로 true => 무한 반복문 {
 			System.out.println();
 		}
+
 	}
 
+	public void method18() {
+		for ( ; ; ) // 조건식 자리 략시 기본적으로 true => 무한 반복문 {
+			System.out.println();
+	}
 }
