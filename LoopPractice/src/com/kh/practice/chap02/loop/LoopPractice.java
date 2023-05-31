@@ -119,7 +119,7 @@ public class LoopPractice {
 			System.out.print("두 번째 숫자 : ");
 			int num2 = sc.nextInt();
 
-			if (num1 > 0 && num2 > 0) {
+			if (num1 > 0 && num2 > 0) { // 다시 공부
 				if (num1 > num2) {
 					for (int i = num2; i <= num1; i++)
 						System.out.print(i + " ");
