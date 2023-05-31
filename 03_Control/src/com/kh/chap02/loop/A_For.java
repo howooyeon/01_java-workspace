@@ -114,21 +114,26 @@ public class A_For {
 		 * 
 		 * sum += i;
 		 */
-
 		Scanner sc = new Scanner(System.in);
-		System.out.print("1이상의 정수 : ");
-		int num = sc.nextInt();
-		int sum = 0;
+		
+		while(true) {
+			
+			System.out.print("1이상의 정수 : ");
+			int num = sc.nextInt();
+			int sum = 0;
 
-		if (num > 0) {
-			for (int i = 1; i <= num; i++) {
-				sum += i;
-			}
+			if (num > 0) {
+				for (int i = 1; i <= num; i++) {
+					sum += i;
+				}
 
-			System.out.println("1부터 " + num + " 까지의 합 : " + sum);
+				System.out.println("1부터 " + num + " 까지의 합 : " + sum);
+				break; // 입력 잘 했으면 빠져나오기
 
-		} else
-			System.out.println("잘못 입력하셨습니다.");
+			} else
+				System.out.println("잘못 입력하셨습니다. 다시 입력해주세요");
+
+		}
 
 	}
 
