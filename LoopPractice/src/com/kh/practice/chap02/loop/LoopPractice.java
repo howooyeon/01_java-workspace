@@ -219,7 +219,7 @@ public class LoopPractice {
 		} else if(op =='/') {
 			System.out.println(num1 + " / " + num2+ " = " + (num1/num2));
 		} else if(op =='%') {
-			System.out.println(num1 + " % " + num2+ " =" + (num1%num2));
+			System.out.println(num1 + " % " + num2+ " = " + (num1%num2));
 		} else {
 			System.out.println("없는 연산자입니다. 다시 입력해주세요."); // 0넣으면 계산 안되는거 다시 생각
 		}
