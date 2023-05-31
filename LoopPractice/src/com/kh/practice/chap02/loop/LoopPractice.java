@@ -201,7 +201,28 @@ public class LoopPractice {
 	}
 
 	public void practice12() {
-
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("연산자(+, -, *, /, %) : ");
+		char op = sc.nextLine().charAt(0);
+		System.out.print("정수 1 : ");
+		int num1 = sc.nextInt();
+		System.out.print("정수 2 : ");
+		int num2 = sc.nextInt();
+		
+		if(op == '+') {
+		System.out.println(num1 + " + " + num2+ " = " + (num1+num2));
+		} else if(op =='-') {
+			System.out.println(num1 + " - " + num2+ " = " + (num1-num2));
+		} else if(op =='*') {
+			System.out.println(num1 + " x " + num2+ " = " + (num1*num2));
+		} else if(op =='/') {
+			System.out.println(num1 + " / " + num2+ " = " + (num1/num2));
+		} else if(op =='%') {
+			System.out.println(num1 + " % " + num2+ " =" + (num1%num2));
+		} else {
+			System.out.println("없는 연산자입니다. 다시 입력해주세요."); // 0넣으면 계산 안되는거 다시 생각
+		}
 	}
 
 	public void practice13() {
@@ -222,8 +243,8 @@ public class LoopPractice {
 		System.out.print("정수 입력 : ");
 		int num = sc.nextInt();
 
-		for(int i=0; i<num; i++) {
-			for(int j=0; j<num-i; j++) {
+		for (int i = 0; i < num; i++) {
+			for (int j = 0; j < num - i; j++) {
 				System.out.print("*");
 			}
 			System.out.println();
