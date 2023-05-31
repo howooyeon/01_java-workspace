@@ -55,9 +55,9 @@ public class B_Continue {
 					System.out.printf("%d X %d = %d\n", dan, gu, dan*gu);
 				}
 			}
-		
 		}
 		
 	}
 
+	
 }
