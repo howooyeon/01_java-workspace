@@ -94,7 +94,8 @@ public class A_For {
 		// 1에서부터 10까지의 총 합계
 
 		/*
-		 * 규칙을 찾자! sum 변수에 누적해서 합산하는게 반복적으로 진해욈 단, 누적해서 더하고자 하는 값이 1에서부터 10까지 1씩 증가되는 걸
+		 * 규칙을 찾자! sum 변수에 누적해서 합산하는게 반복적으로 진행됨 
+		 * 단, 누적해서 더하고자 하는 값이 1에서부터 10까지 1씩 증가되는 걸
 		 * 파악할 수 있음
 		 * 
 		 * int sum = 0; sum += 1 sum += 2 sum += 3 sum += 4 sum += 5
@@ -150,7 +151,7 @@ public class A_For {
 		// 0.0 ~ 1.0 0.0 ~ 0.999999
 
 		// int random = 10 * Math.random();
-		// 0.0 ~ 10.0 0.0 ~ 9 999999
+		// 0.0 ~ 10.0 0.0 ~ 9.999999
 
 		// int random = Math.random()* 10 +1;
 		// 1.0 ~ 11.0 1.0 ~ 10.999999
@@ -247,7 +248,8 @@ public class A_For {
 		// 2 ~ 9 사이의 랜덤값 발생 시켜서 랜덤단 출력하기
 
 		int dan = (int) (Math.random() * 8 + 2);// 2가 시작수, 시작수로부터 몇개의 랜덤값 발생시킬 곱해줌 시작수는 더해줌
-		Scanner sc = new Scanner(System.in);
+		
+		//Scanner sc = new Scanner(System.in);
 		System.out.println("===" + dan + "단 ===");
 
 		for (int i = 1; i < 10; i++)
@@ -276,7 +278,7 @@ public class A_For {
 		// ****
 
 		// 행은 1~4까지 반복 => 바깥쪽 for문
-		// 매 행 고정일 때 영ㄹ은 1~4까지 반복 => 안쪽 for문
+		// 매 행 고정일 때 열은 1~4까지 반복 => 안쪽 for문
 
 		for (int j = 1; j <= 4; j++) {
 

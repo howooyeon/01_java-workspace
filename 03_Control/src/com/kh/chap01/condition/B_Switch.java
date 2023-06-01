@@ -114,7 +114,7 @@ public class B_Switch {
 			break;
 		case 3 :
 			System.out.println("읽기권한");
-			break;
+			break; // break; 없이도 가능함 case1은 2,3 다 출력 break 안 걸었기 때문
 		}
 		
 	}
