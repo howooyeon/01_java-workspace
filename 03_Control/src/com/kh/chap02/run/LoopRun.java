@@ -26,6 +26,7 @@ public class LoopRun {
 		//a.method16();
 		//a.method17();
 		//a.method18();
+		a.rps();
 		
 		B_While b = new B_While();
 		//b.method1();
@@ -37,7 +38,7 @@ public class LoopRun {
 		C_DoWhile c = new C_DoWhile();
 		//c.method1();
 		//c.method2();
-		c.method3();
+		//c.method3();
 	}
 
 }
