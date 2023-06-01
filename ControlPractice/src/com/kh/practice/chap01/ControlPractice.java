@@ -217,25 +217,31 @@ public class ControlPractice {
 		int assign = sc.nextInt();
 		System.out.print("출석 점수  : ");
 		int attend = sc.nextInt();
+		double total = ((mid * 0.2) + (fin * 0.3) + (assign * 0.3) + attend);
 
 		System.out.println("=============결과=============");
-
-		System.out.println("중간고사 점수(20) : " + mid * 0.2);
-		System.out.println("기말고사 점수(30) : " + fin * 0.3);
-		System.out.println("과제 점수		(30) : " + assign * 0.3);
-		System.out.println("과제 점수		(20) : " + (double) attend);
-		double total = ((mid * 0.2) + (fin * 0.3) + (assign * 0.3) + attend);
-		System.out.println("총점 : " + total);
-
-		if (total >= 70 && attend >= 14) {
+		if (attend < 14) {
+			System.out.println("Fail [출석 회수 부족 (" + attend + "/20)]");
+			return;
+		} else if (total >= 70) {
+			System.out.println("중간고사 점수(20) : " + mid * 0.2);
+			System.out.println("기말고사 점수(30) : " + fin * 0.3);
+			System.out.println("과제 점수		(30) : " + assign * 0.3);
+			System.out.println("과제 점수		(20) : " + (double) attend);
+			System.out.println("총점 : " + total);
 			System.out.println("PASS");
 		} else {
+			System.out.println("중간고사 점수(20) : " + mid * 0.2);
+			System.out.println("기말고사 점수(30) : " + fin * 0.3);
+			System.out.println("과제 점수		(30) : " + assign * 0.3);
+			System.out.println("과제 점수		(20) : " + (double) attend);
+			System.out.println("총점 : " + total);
 			System.out.println("Fail [점수 미달]");
 		}
 	}
-	
+
 	public void practice10() {
-		
+
 		System.out.println("1. 메뉴 출력");
 		System.out.println("2. 짝수/홀수");
 		System.out.println("3. 합격/불합격");
@@ -246,33 +252,41 @@ public class ControlPractice {
 		System.out.println("8. 계산기");
 		System.out.println("7. P/F");
 		System.out.print("선택 : ");
-		
-		
+
 		Scanner sc = new Scanner(System.in);
 		int num = sc.nextInt();
-		
-		switch(num){
+
+		switch (num) {
 		case 1:
-			practice1(); break;
+			practice1();
+			break;
 		case 2:
-			practice2(); break;
+			practice2();
+			break;
 		case 3:
-			practice3(); break;
+			practice3();
+			break;
 		case 4:
-			practice4(); break;
+			practice4();
+			break;
 		case 5:
-			practice5(); break;
+			practice5();
+			break;
 		case 6:
-			practice6(); break;
+			practice6();
+			break;
 		case 7:
-			practice7(); break;
+			practice7();
+			break;
 		case 8:
-			practice8(); break;
+			practice8();
+			break;
 		case 9:
-			practice9(); break;
+			practice9();
+			break;
 		}
-		
-		sc.close();		
+
+		sc.close();
 	}
 
 }
