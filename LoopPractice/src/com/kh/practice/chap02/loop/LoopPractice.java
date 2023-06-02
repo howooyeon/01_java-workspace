@@ -33,7 +33,7 @@ public class LoopPractice {
 				System.out.println();
 			} else {
 				System.out.println("1 이상의 숫자를 입력해주세요.");
-				return;
+				return; // break도 될거같음
 			}
 		}
 
