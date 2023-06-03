@@ -102,7 +102,7 @@ public class ArrayPractice {
 		System.out.print("0 ~ 6 사이 숫자 입력 : ");
 		int num = sc.nextInt();
 
-		if (num < 7) {
+		if (num < 7 && num > 1) {
 			System.out.println(str[num] + "요일");
 		} else
 			System.out.println("잘못 입력하셨습니다.");
@@ -137,18 +137,16 @@ public class ArrayPractice {
 		// 1. 3이상인 홀수 자연수를 입력 받아 배열의 중간까지 1부터 1씩 증가해 오름차순 값 넣고
 			Scanner sc = new Scanner(System.in);
 			
-			int input;
-			int[] arr;
 			int num = 1;
 			
 			while (true) {
 				System.out.print("정수 : ");
-				input = sc.nextInt();
+				int input = sc.nextInt();
 				
 				if (input < 3 || input % 2 == 0)
 					System.out.println("다시 입력하세요.");
 				else {
-					arr = new int[input];
+					int[] arr = new int[input];
 					
 					for (int i = 0; i < arr.length; i++) {
 						System.out.println(arr[i]);
