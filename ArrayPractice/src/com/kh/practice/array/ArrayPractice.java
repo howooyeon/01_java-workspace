@@ -1,5 +1,6 @@
 package com.kh.practice.array;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class ArrayPractice {
@@ -191,7 +192,227 @@ public class ArrayPractice {
 				System.out.println(chicken+"치킨은 없는 메뉴입니다.");
 			}
 		}
+	
+	
+		public void practice10() {
+			// 주민등록번호 성별자리 이후부터 *로 가리고 출력하세요
+			// 단, 원본 배열 값은 변경 없이 배열 복사본으로 변경
+			
+			Scanner sc = new Scanner(System.in);
+			System.out.print("주민등록번호(-포함) : ");
+			String str = sc.nextLine();
+			
+			// 반복문을 활용해서 char[]에 옮겨담기
+			char[] origin = new char[str.length()];
+			
+			for(int i = 0; i<str.length(); i++) {
+				origin[i] = str.charAt(i);
+			}
+			
+			// 복사본 char[]에 성별자리 이후부터 *로 값이 들어가게끔 깊은 복사 후 바로 출력
+			
+			char[] copy = new char[origin.length];
+			
+			for(int i = 0; i < copy.length; i++) {
+				// 7번 인덱스 이하까지는 기존의 주민 번호들 복사
+				if(i <= 7) {
+					copy[i] = origin[i];
+					// 그 이후부터는 * 값 들어가도록
+				}else {
+					copy[i] = '*';
+				}
+				// 바로 출력
+				System.out.print(copy[i]);
+			}
+			
+		}
+		
+		public void practice11() {
+			// 10개의 값을 저장할 수 있는 정수형 배열을 선언 및 할당하고
+			// 1~10사이의 난수를 발생시켜 배열에 초기화한 후 출력하세요
+			
+			int[] arr = new int [10];
 
+			for (int i = 0; i < arr.length; i++) {
+				arr[i] = (int) (Math.random() * 10 + 1);
+			
+				System.out.print(arr[i] + " ");
+			}
+		}
+		
+		public void practice12() {
+			// 10개의 값을 저장할 수 있는 정수형 배열을 선언 및 할당하고 
+			int[] arr = new int [10];
+			
+			// 1~10 사이의 난수를 발생시켜 배열에 초기화한 후
+			for (int i = 0; i < arr.length; i++) {
+				arr[i] = (int) (Math.random() * 10 + 1);
+				System.out.print(arr[i] + " ");
+			}
+			System.out.println();
+			
+			// 배열 전체 값과 그 값 중에서 최대값과 최소값을 출력하세요
+			int max, min;
+			
+			max = min = arr[0];
+			for(int i = 0; i < arr.length; i++) {
+				if(max<arr[i])
+					max = arr[i];
+				if(min>arr[i])
+					min = arr[i];
+			}
+			System.out.println("최대 값 : " + max);
+			System.out.println("최소 값 : " + min);
+			
+		}
+		
+		public void practice13() {
+			// 10개의 값을 저장할 수 있는 정수형 배열을 선언 및 할당하고
+			int[] arr = new int [10];
+			
+			// 1~10 사이의 난수를 발생시켜 *중복된 값이 없게* 배열에 초기화한 후 출력하세요
+			for(int i = 0; i < arr.length; i++) {
+				arr[i] = (int)(Math.random()*10 + 1);
+				
+				for (int j = 0; j < i ; j++) { // 코드 중요
+					if(arr[i] == arr[j]) {
+						i--;
+						break;
+					}
+				}
+			}
+			for (int i = 0; i < arr.length; i++) {
+				System.out.print(arr[i]+ " ");
+			}
+
+		}
+		
+		public void practice14() {
+			// 로또 번호 자동 생성기 프로그램을 작성하는데 중복값 없이 오름차순으로 정렬하여 출력하세요
+			
+			int[] arr = new int [6];
+			
+			for(int i = 0; i < arr.length; i++) {
+				arr[i] = (int) (Math.random() * 45 + 1);
+				
+			// 중복값 판별 13번 참고
+				for (int j = 0; j < i ; j++) { 
+					if(arr[i] == arr[j]) {
+						i--;
+						break;
+					}
+				}
+			}
+			
+			// 오름차순 정렬
+			for(int i = 0; i < arr.length; i++) {
+				for(int j =  i+1; j < arr.length; j++) {
+					if(arr[i] > arr[j]) {
+						int temp = arr[i];
+						arr[i] = arr[j];
+						arr[j] = temp;
+					}
+				}
+			}
+			for(int i = 0; i < arr.length; i++) {
+				System.out.print(arr[i]+ " ");
+			}
+		}
+		
+		public void practice15() {
+			// 문자열을 입력 받아 문자열에 어떤 문자가 들어갔는지 배열에 저장하고
+			// 문자의 개수와 함께 출력하세요
+			
+			Scanner sc = new Scanner(System.in);
+			
+			System.out.print("문자열 : ");
+			String str = sc.nextLine();
+			
+			char[] arr = new char[str.length()];
+			
+			for(int i = 0; i < arr.length; i++) {
+				arr[i] = str.charAt(i);
+			}
+			
+			int count = 0;
+			
+			System.out.print("문자열에 있는 문자 : ");
+			for(int i = 0; i < arr.length; i++) {
+				boolean flag = true;
+				
+				for(int j = 0; j < i; j++) {
+					if(arr[i] == arr[j]) {
+						flag = false;
+						break;
+					}
+				}
+				if(flag) {
+					if(i == 0) {
+						System.out.print(arr[i]);
+					}else {
+						System.out.print(", " + arr[i]);
+					}
+					count ++;
+				}
+			}
+			System.out.println();
+			System.out.println("문자 개수 : " + count);
+			
+		}
+		
+		public void practice16() {
+			// 사용자가 입력한 배열의 길이만큼의 문자열 배열을 선언, 할당
+			Scanner sc = new Scanner(System.in);
+			System.out.print("배열의 크기를 입력하시오 : ");
+			int size = sc.nextInt();
+			sc.nextLine();
+			
+			// 배열의 인덱스에 넣을 값 역시 사용자가 입력하여 초기화
+			String[] arr = new String[size];
+			
+			// 사용자에게 첫 배열에 저장할 문자열 입력 받기
+			for(int i = 0; i <arr.length; i++) {
+				System.out.print((i+1)+ "번째 문자열 : ");
+				arr[i] = sc.nextLine();
+			}
+			
+			// 반복이 시작되는 구간부터 무한루프로 내부에 종료 조건 만들고 break걸어주기
+			while(true) {
+				System.out.print("더 값을 입력하시겠습니까?(Y/N) : ");
+				char ch = sc.nextLine().charAt(0);
+				
+				// 값을 더 입력할 경우
+				if (ch =='Y'|| ch == 'y') {
+					
+					// 더 입력받을 개수 입력 받기
+					System.out.print("더 입력하고 싶은 개수 : ");
+					int plusSize = sc.nextInt();
+					sc.nextLine();
+					
+					// 새로 값을 입력받을 배열 생성 --> 기존 배열 크기 + 추가 입력개수
+					String[] newArr = new String[arr.length + plusSize];
+					
+					// 배열 복사 + 새로운 문자열 입력받기
+					for(int i = 0; i <newArr.length; i++) {
+						if(i< arr.length) { // 인덱스의 크기가 기존 배열보다 작을 경우 기존 배열 값 복사
+							newArr[i] = arr[i];
+						}else { // 인덱스의 크기가 기존 배열보다 클 경우 새로운 문자열 입력 받기
+							System.out.print((i+1)+"번째 문자열 : ");
+							newArr[i] = sc.nextLine();
+						}
+					}
+					
+					// 기존 배열 공간을 참조하던 변수 arr에 새로운 배열 공간 주소 newArr 대입
+					arr = newArr;
+				} else if(ch == 'N'|| ch == 'n') { // 값을 더 입력하지 않은 경우
+					break; // 반복문 종료
+				} else { // 잘못 입력한 경우
+					System.out.println("잘못 입력하셨습니다. 다시 입력해주세요.");
+				}
+			}
+			
+			// 배열 값 모두 출력
+			System.out.println(Arrays.toString(arr));
+		}
+		
 	}
-	
-	
