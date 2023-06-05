@@ -1,6 +1,7 @@
 package com.kh.practice.run;
 
 import com.kh.practice.array.ArrayPractice;
+import com.kh.practice.array.practice_0605;
 
 public class Run {
 
@@ -21,7 +22,12 @@ public class Run {
 		//a.practice13();
 		//a.practice14();
 		//a.practice15();
-		a.practice16();
+		//a.practice16();
+		
+		practice_0605 p = new practice_0605();
+		//p.practice12();
+		//p.rsp();
+		p.practice8();
 		
 	}
 
