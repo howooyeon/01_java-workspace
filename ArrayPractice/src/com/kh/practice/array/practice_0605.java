@@ -197,5 +197,23 @@ public class practice_0605 {
 		}
 
 	}
+	
+	public void practice13() {
+		Scanner sc = new Scanner(System.in);
+		int[] arr = new int [10];
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = (int) (Math.random() * 10 + 1);
+			// 탐색은 무조건 for문
+			for(int j = 0; j < i; j++) // 이 부분이 진짜 중요
+				if(arr[i] == arr[j]) {
+					// 중복을 제거하는 코드 : 랜덤수를 다시 만드는 코드
+					i--; // 취소 여기도 써보기
+				}
 
+		} 
+		for (int i = 0; i < arr.length; i++) {
+			System.out.print(arr[i] + " ");
+		}
+	}
+	
 }

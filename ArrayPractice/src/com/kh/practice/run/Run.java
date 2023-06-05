@@ -27,7 +27,8 @@ public class Run {
 		practice_0605 p = new practice_0605();
 		//p.practice12();
 		//p.rsp();
-		p.practice8();
+		//p.practice8();
+		p.practice13();
 		
 	}
 

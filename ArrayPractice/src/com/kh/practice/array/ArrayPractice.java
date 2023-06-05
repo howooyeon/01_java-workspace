@@ -320,6 +320,7 @@ public class ArrayPractice {
 		}
 		
 		public void practice15() {
+			// 버블정렬 문제
 			// 문자열을 입력 받아 문자열에 어떤 문자가 들어갔는지 배열에 저장하고
 			// 문자의 개수와 함께 출력하세요
 			
