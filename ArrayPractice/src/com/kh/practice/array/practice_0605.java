@@ -1,5 +1,6 @@
 package com.kh.practice.array;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class practice_0605 {
@@ -216,4 +217,88 @@ public class practice_0605 {
 		}
 	}
 	
+	public void practice15() {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("문자열 : ");
+		String str = sc.nextLine();
+		
+		char[] arr = new char[str.length()];
+		int count = 0; // 문자의 개수 출력
+		
+		System.out.print("문자열에 있는 문자 : ");
+		for(int i = 0; i < arr.length; i++) {// char 배열에 값대입
+			arr[i] = str.charAt(i);
+			
+			// 중복 제거
+			boolean flag = true;
+			
+			for(int j = 0; j < i; j++) {
+				if(arr[i] == arr[i]) {
+					flag = false;
+					break;
+				}
+			}
+			
+			if(flag /*flag == true*/) {
+				count ++;
+				
+				if(i == 0) {
+					System.out.println(arr[i]);
+				}else {
+					System.out.println(", " + arr[i]);
+				}
+			}
+			
+		}
+
+	}
+	
+	public void practice16() {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("길이를 입력하세요 : ");
+		int num = sc.nextInt();
+		sc.nextLine();
+		
+		String[] origin = new String[num];
+		String[] copy = null;
+		
+		for(int i = 0; i < origin.length; i++) {
+			System.out.printf("%d번째 문자열 : " + i+1);
+			
+			origin[i] = sc.nextLine();
+			
+			while(true) {
+				System.out.print("더 값을 입력하시겠습니까? (Y/N) : ");
+				char ch = sc.nextLine().charAt(0);
+				if(ch == 'y' || ch == 'Y') { // 더 입력하겠다는 경우
+					System.out.println("더 입력하고 싶은 개수 : ");
+					num = sc.nextInt(); // 할 일 다 끝난 num의 변수를 활용해봄
+					
+					copy = Arrays.copyOf(origin, origin.length + num);
+					
+					for(int j  = origin.length; j < copy.length; j++) {
+						System.out.println("%d번째 문자열 : " + j+1);
+						copy[j] = sc.nextLine();
+					}
+					
+					origin = copy;
+					
+				}else { // 그만하는 경우
+					System.out.print("[");
+					for(int j =0; j<copy.length; j++) {
+						if(i == copy.length-1) { // 마지막 인덱스인 경우
+							System.out.printf("%s", copy[i]);
+						}else {
+							System.out.printf("%s, ", copy[i]);
+						}
+					}
+					System.out.print("]");
+					break;
+				}
+			}
+
+		}
+	}
+
 }

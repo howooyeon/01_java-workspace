@@ -28,7 +28,9 @@ public class Run {
 		//p.practice12();
 		//p.rsp();
 		//p.practice8();
-		p.practice13();
+		//p.practice13();
+		//p.practice15();
+		p.practice16();
 		
 	}
 
