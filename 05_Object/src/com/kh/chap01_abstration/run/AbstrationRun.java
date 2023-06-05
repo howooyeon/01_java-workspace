@@ -1,5 +1,7 @@
 package com.kh.chap01_abstration.run;
 
+import com.kh.chap01_abstration.model.vo.Student;
+
 public class AbstrationRun {
 	
 	
@@ -36,16 +38,77 @@ public class AbstrationRun {
 	 * 		4) 이름 : String name;
 	 * 		   나이 : int age;
 	 * 			키 : double height;
-	 * 			
+	 * 6. 위에 선정된 것들을 가지고 본격적인 프로그램을 할 건데...
+	 * 
+	 * 		1) 변수만으로 프로그래밍을 한다면?
+	 * 			변수 - 하나의 자료형의 하나의 값만을 보관할 수 있음	
+	 * 
+	 * 			문동은이라는 학생 객체를 하나 만들어내기 위해서? ==> String name1 = "문동은"; int age = 20; double height = 162.3
+	 * 			박연진이라는 학생 객체를 하나 만들어내기 위해서? ==> String name 2= "박연진"; int age = 21; double height2 = 170
+	 * 			이사라라는 학생 객체를 하나 만들어내기 위해서? ==> String name3 = "이사라"; int age = 22; double height3 = 162
+	 * 			.... 등등의 수백명에 해당하는 학생들 만들어야 함
+	 * 			어떤 문제가 발생?? => 수백명에 해당되는 학생들을 만들 때=> 수천재의 변수가 만들어짐
+	 * 
+	 * 		2) 배열로 프로그래밍을 한다면?
+	 * 
+	 * 		* 배열 - 하나의 자료형의 여러개의 값들을 보관할 수 있음
+	 * 		
+	 * 		학생들의 이름들을 보관하는 String[] name = {"문동은", "박연진", "이사라"}
+	 * 		학생들의 나이를 보관하는 	int[] age = {20,        21 ,      22}
+	 * 		학생들의 키를 보관하는 doubl[] height = {162.3, 170, 162}
+	 * 
+	 * 		어떤 문제가 발생??
+	 * 		=> 기존의 학생 정보를 지워야 할 때 뒤의 정보들을 앞으로 땡기는 과정을 진행해야함
+	 * 		잘못땡기면 정보가 틀어진다...
+	 * 		=> 새로운 학생이 전학오면? 배열 다시 만들어야함 + 복사해야함
+	 * 		
+	 * 		3) 그래서 나온 개념이 구조체!!
+	 * 		* 구조체 - 여러개의 자료형의 여러개의 값들을 보관할 수 있음
+	 * 
+	 *		String 값도 보관하고, int값도 보관하고, double값도 같이 보관할 수 있도록
+	 *		나만의 배열같은 자료형을 만들자! 그게 바로 클래스!
+	 *
+	 *	
+	 *		Student라는 클래스로 만들꺼임! => 객체의 정보를 보관할 그릇과도 같은 이런 클래스들은 => model.vo라는 패키지에 보관
+	 *	 
+	 * 		
+	 * 	
+	 * 
+	 * 
 	 * 
 	 */
 	
-	
-	
-	
 
 	public static void main(String[] args) {
+		// 자바에서의 객체로 만들기 위해서 new라는 키워드를 통해 heap영역에 생성 먼저 해야됨(공간할당)
+		Student moon = new Student();
+		// 클래스명 별칭 = new 클래스명();
 		
+		moon.name = "문동은";
+		moon.age = 20;
+		moon.height = 162.3;
+		
+		System.out.println(moon);
+		System.out.println(moon.name + "님의 나이는 " + moon.age + "살이고, 키는 " + moon.height+" 입니다");
+		
+		
+		// 박연진 학생 객체 만들기 => 박연진, 21, 173.4
+		Student park = new Student();
+		
+		park.name = "박연진";
+		park.age = 21;
+		park.height = 173.4;
+		
+		System.out.println(park);
+		System.out.println(park.name + "님의 나이는 " + park.age + "살이고, 키는 " + park.height+" 입니다");
+		
+		/*
+		 * 필드를 public 접근 제한자로 작성
+		 * => 필드에 직접적으로 접근해서 값 대입하거나 값을 가져올 수 있음!
+		 * => 외부에서 함부로 값을 변질시키거나 조회권한이 없는 사람이 가져올 수 있는 문제 발생!
+		 * 		>> 캡슐화 작업을 할 것
+		 * 
+		 */
 	}
 
 }

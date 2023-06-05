@@ -286,8 +286,8 @@ public class practice_0605 {
 					
 				}else { // 그만하는 경우
 					System.out.print("[");
-					for(int j =0; j<copy.length; j++) {
-						if(i == copy.length-1) { // 마지막 인덱스인 경우
+					for(int i =0; i<copy.length; i++) {
+						if(i == origin.length-1) { // 마지막 인덱스인 경우
 							System.out.printf("%s", copy[i]);
 						}else {
 							System.out.printf("%s, ", copy[i]);
