@@ -290,7 +290,7 @@ public class ArrayPractice {
 		public void practice14() {
 			// 로또 번호 자동 생성기 프로그램을 작성하는데 중복값 없이 오름차순으로 정렬하여 출력하세요
 			
-			int[] arr = new int [6];
+			int[] arr = new int [7];
 			
 			for(int i = 0; i < arr.length; i++) {
 				arr[i] = (int) (Math.random() * 45 + 1);
@@ -314,6 +314,7 @@ public class ArrayPractice {
 					}
 				}
 			}
+			System.out.print("나현언니만의 로또 번호 : ");
 			for(int i = 0; i < arr.length; i++) {
 				System.out.print(arr[i]+ " ");
 			}
@@ -416,4 +417,92 @@ public class ArrayPractice {
 			System.out.println(Arrays.toString(arr));
 		}
 		
+		public void practice17() {
+			// 사용자가 입력한 배열의 길이만큼의 문자열 배열을 선언, 할당
+			Scanner sc = new Scanner(System.in);
+			System.out.print("배열의 크기를 입력하세요 : ");
+			int size = sc.nextInt();
+			sc.nextLine();
+
+			String[] str = new String[size];
+
+			// 사용자에게 첫 배열에 저장할 문자열 입력 받기
+			for (int i = 0; i < str.length; i++) {
+				System.out.print((i + 1) + "번 째 문자열 : ");
+				str[i] = sc.nextLine();
+			}
+
+			// 반복이 시작되는 구간부터 무한루프로 내부에 종료 조건 만들고 break걸어주기
+			while (true) {
+				System.out.print("더 값을 입력하시겠습니까?(Y/N) : ");
+				char ch = sc.nextLine().charAt(0);
+
+				// 값을 더 입력할 경우
+				if (ch == 'y' || ch == 'Y') {
+					System.out.print("더 입력하고 싶은 개수 : ");
+					int plusSize = sc.nextInt();
+					sc.nextLine();
+
+					String[] newArr = new String[str.length + plusSize];
+
+					for (int i = 0; i < newArr.length; i++) {
+						if (i < str.length) {
+							newArr[i] = str[i];
+						} else {
+							System.out.print((i + 1) + " 번째 문자열 : ");
+							newArr[i] = sc.nextLine();
+						}
+
+					}
+					newArr = str;
+				} else if (ch == 'N' || ch == 'n') {
+					break;
+				} else {
+					System.out.println("잘못 입력하셨습니다. 다시 입력해주세요.");
+				}
+			}
+			System.out.println(Arrays.toString(str));
+
+		}
+		
+		public void practice18() {
+			// 스캐너 생성해서 문자열 입력받기
+			Scanner sc = new Scanner(System.in);
+			System.out.print("문자열 : ");
+			String str = sc.nextLine();
+			
+			// 문자를 입력받을 배열 생성
+			char[] arr = new char[str.length()];
+			int count = 0; //문자의 개수 셀 count라는 변수(그릇)만들기
+			System.out.print("문자열에 있는 문자 : ");
+		
+			
+			for(int i = 0; i < arr.length; i++) {
+				arr[i] = str.charAt(i);
+				
+				// 중복 제거
+				boolean flag = true;
+				
+				for(int j = 0; j < i; j++) {
+					if(arr[i]==arr[j]) {
+						flag = false;
+						break;
+					}
+				}
+				
+				if(flag) {
+					count++;
+					
+					if (i == 0) {
+						System.out.print(arr[i]);
+					} else {
+						System.out.print(", " + arr[i]);
+					}
+				}
+			}
+
+		}
+		
+		
+
 	}

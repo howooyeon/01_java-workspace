@@ -23,6 +23,8 @@ public class Run {
 		//a.practice14();
 		//a.practice15();
 		//a.practice16();
+		//a.practice17();
+		a.practice18();
 		
 		practice_0605 p = new practice_0605();
 		//p.practice12();
@@ -30,7 +32,7 @@ public class Run {
 		//p.practice8();
 		//p.practice13();
 		//p.practice15();
-		p.practice16();
+		//p.practice16();
 		
 		
 	}

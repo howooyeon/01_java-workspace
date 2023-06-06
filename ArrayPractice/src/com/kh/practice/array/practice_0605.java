@@ -234,7 +234,7 @@ public class practice_0605 {
 			boolean flag = true;
 			
 			for(int j = 0; j < i; j++) {
-				if(arr[i] == arr[i]) {
+				if(arr[i] == arr[j]) {
 					flag = false;
 					break;
 				}
@@ -244,9 +244,9 @@ public class practice_0605 {
 				count ++;
 				
 				if(i == 0) {
-					System.out.println(arr[i]);
+					System.out.print(arr[i]);
 				}else {
-					System.out.println(", " + arr[i]);
+					System.out.print(", " + arr[i]);
 				}
 			}
 			
@@ -264,21 +264,24 @@ public class practice_0605 {
 		String[] copy = null;
 		
 		for(int i = 0; i < origin.length; i++) {
-			System.out.printf("%d번째 문자열 : " + i+1);
+			System.out.printf("%d번째 문자열 : ", i+1);
 			
 			origin[i] = sc.nextLine();
+		}
+		
 			
 			while(true) {
 				System.out.print("더 값을 입력하시겠습니까? (Y/N) : ");
 				char ch = sc.nextLine().charAt(0);
 				if(ch == 'y' || ch == 'Y') { // 더 입력하겠다는 경우
-					System.out.println("더 입력하고 싶은 개수 : ");
+					System.out.print("더 입력하고 싶은 개수 : ");
 					num = sc.nextInt(); // 할 일 다 끝난 num의 변수를 활용해봄
+					sc.nextLine();
 					
-					copy = Arrays.copyOf(origin, origin.length + num);
+					copy = Arrays.copyOf(origin, origin.length + num); // 여기 이해 안됨
 					
 					for(int j  = origin.length; j < copy.length; j++) {
-						System.out.println("%d번째 문자열 : " + j+1);
+						System.out.printf("%d번째 문자열 : ", j+1);
 						copy[j] = sc.nextLine();
 					}
 					
@@ -286,11 +289,11 @@ public class practice_0605 {
 					
 				}else { // 그만하는 경우
 					System.out.print("[");
-					for(int i =0; i<copy.length; i++) {
+					for(int i =0; i<origin.length; i++) {
 						if(i == origin.length-1) { // 마지막 인덱스인 경우
-							System.out.printf("%s", copy[i]);
+							System.out.printf("%s", origin[i]);
 						}else {
-							System.out.printf("%s, ", copy[i]);
+							System.out.printf("%s, ", origin[i]);
 						}
 					}
 					System.out.print("]");
@@ -301,4 +304,4 @@ public class practice_0605 {
 		}
 	}
 
-}
+
