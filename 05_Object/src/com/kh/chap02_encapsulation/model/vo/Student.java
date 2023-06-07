@@ -38,6 +38,7 @@ public class Student { // 나만의 자료형
 	}
 	*/
 	
+
 	public void setName(String name) { // 관례적인 표현
 		 // name = name; 색이 없음.. 매개변수 name = 매개변수 name; 형식
 									// 필드명과 매개변수명이 도일한 시점에서는 해당 메소드 영역에서 만들어진 변수가 우선순위가 높음
@@ -76,6 +77,10 @@ public class Student { // 나만의 자료형
 	
 	public double getHeight() {
 		return height;
+	}
+	
+	public int getKorScore() {
+		return korScore;
 	}
 	
 	public int getMathScore() {

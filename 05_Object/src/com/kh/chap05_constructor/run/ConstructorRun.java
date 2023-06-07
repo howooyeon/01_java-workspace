@@ -21,7 +21,7 @@ public class ConstructorRun {
 		 */
 		
 		//2. 매개변수 3개짜리 생성자로 객체 생성 후 정보 출력
-		User u2 = new User("user02","pwd02","차은우" ); 
+		User u2 = new User("user02","pwd02","차은우"); 
 		System.out.println(u2.information());
 		
 		// 그럼 setter 안만들어도 되지않을까? => 안됨
