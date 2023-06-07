@@ -34,6 +34,7 @@ public class ConstructorRun {
 		
 		// 3. 매개변수 5개짜리 생성자로 객체 생성
 		// "user03" "pwd03" "장원영" "23" '여'
+		// informtation() 출력
 		
 		User u3 = new User("user03", "pwd03", "장원영", 23, '여'); 
 		System.out.println(u3.information());
