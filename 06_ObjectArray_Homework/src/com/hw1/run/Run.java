@@ -37,16 +37,16 @@ public class Run {
 		
 		int totalAverage = (e1Total + e2Total + e3Total)/ 3; 
 		
-		System.out.println("김말똥의 연봉 : " + e1Total);
-		System.out.println("홍길동의 연봉 : " + e2Total);
-		System.out.println("강말순의 연봉 : " + e3Total);
-		
 		System.out.println("===========================================================================");
 		
+		System.out.println("김말똥의 연봉 : " + e1Total + " 원");
+		System.out.println("홍길동의 연봉 : " + e2Total + " 원");
+		System.out.println("강말순의 연봉 : " + e3Total + " 원");
+		
+		System.out.println("===========================================================================");
+
 		// 3명 직원의 연봉 평균을 구하여 출력
-		System.out.println("직원들의 연봉 평균 : " + totalAverage);
-		
-		
+		System.out.println("직원들의 연봉 평균 : " + totalAverage + "원");
 
 	}
 
