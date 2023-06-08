@@ -1,24 +1,26 @@
 package com.hw1.model.vo;
 
 public class Product {
-	private String productId;
-	private String productName;
-	private String productArea;
-	private int price;
-	private double tax;
+	// 필드부
+	private String productId;	// 상품 아이디
+	private String productName; // 상품명
+	private String productArea; // 생산지
+	private int price;			// 가격
+	private double tax;			// 부사세
 
-	public Product() {
-		// 기본생성자
-	}
+	// 생성자부 (기본 +  전체)
+	public Product() { }
 	
+	// 전체 생성자
 	public Product(String productId, String productName, String productArea, int price, double tax) {
-		this.productId = productId;
+		this.productId = productId; 		// this. 해당영역의 주소값을 받는다
 		this.productName = productName;
 		this.productArea = productArea;
 		this.price = price;
 		this.tax = tax;
 	}
-
+	
+	// get - set => 한세트로 작성
 	public String getProductId() {
 		return productId;
 	}
