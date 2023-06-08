@@ -33,7 +33,7 @@ public class Run {
 		
 		int e1Total = (int) ((3000000 + 3000000 * 0.2) * 12);
 		int e2Total = (int) ((4000000 + 4000000 * 0.3) * 12);
-		int e3Total = (int) ((1000000 + 1000000* 0.01) * 12);
+		int e3Total = (int) ((1000000 + 1000000 * 0.01) * 12);
 		
 		int totalAverage = (e1Total + e2Total + e3Total)/ 3; 
 		
