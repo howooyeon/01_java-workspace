@@ -33,7 +33,10 @@ public class Rectangle extends Point{
 	}
 
 	
+	@Override
 	public void draw() {
 		super.draw();
+		System.out.println("직사각형의 면적 : " + (width * height));
+		System.out.println("직사각형의 둘레 : " + (width + height));
 	}
 }

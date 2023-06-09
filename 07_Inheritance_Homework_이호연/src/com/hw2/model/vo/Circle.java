@@ -20,10 +20,13 @@ public class Circle extends Point {
 		this.radius = radius;
 	}
 
+	@Override
 	public void draw() {
 		super.draw();
-		System.out.println("원의 면적 : " + (float)(Math.PI * radius * radius));
-		System.out.println("원의 둘레 : " + (float)(Math.PI * radius * 2));
+		double area = Math.PI * radius * radius;
+		double round = Math.PI * radius * 2;
+		System.out.printf("원의 면적 : %.1f \n", area);
+		System.out.printf("원의 면적 : %.1f \n", round);
 	}
 
 }
