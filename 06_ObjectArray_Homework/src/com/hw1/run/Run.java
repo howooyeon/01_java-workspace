@@ -20,6 +20,7 @@ public class Run {
 		Employee employee2 = new Employee(2, "강말순", "교육부", "강사", 20, 'F', 10000000, 0.01, "01011112222", "서울 마곡");
 		System.out.println(employee2.information());
 		
+		
 		System.out.println("===========================================================================");
 		
 		// 3개의 객체 중 값이 없는 필드에 각각 값을 넣은 뒤 다시 출력(임의로)
@@ -47,7 +48,8 @@ public class Run {
 
 		// 3명 직원의 연봉 평균을 구하여 출력
 		System.out.println("직원들의 연봉 평균 : " + totalAverage + "원");
-
+		
+	
 	}
 
 }
