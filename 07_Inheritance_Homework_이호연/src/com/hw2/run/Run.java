@@ -19,8 +19,10 @@ public class Run {
 		
 		// 위의 사용 데이터를 참고하여 각각 초기화
 		// 각 도형의 draw 메소드 실행
-		for(int i = 0; i < circle.length; i++){
-			System.out.println(circle.draw);
+		
+		draw();
+//		for(int i = 0; i < circle.length; i++){
+//			Circle.draw();
 		}
 	}
 
