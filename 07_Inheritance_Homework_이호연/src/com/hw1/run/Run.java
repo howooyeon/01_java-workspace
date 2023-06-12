@@ -56,7 +56,7 @@ public class Run {
 			e[count] = new Employee(name, age, height, weight, salary, dept);
 			count++;
 
-			if (ch == 'n' || ch == 'N') {
+			if (ch == 'n' || ch == 'N' || count == 10) {
 				System.out.println("그만 입력받습니다.");
 				break;
 			}

@@ -32,6 +32,7 @@ public class Employee extends Person {
 		this.dept = dept;
 	}
 	
+	@Override
 	public String toString() {
 		return super.toString() + ", 급여 : " + salary + ", 부서 : " + dept;
 	}

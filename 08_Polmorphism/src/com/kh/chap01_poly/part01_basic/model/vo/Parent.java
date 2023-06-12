@@ -1,15 +1,14 @@
-package com.hw2.model.vo;
+package com.kh.chap01_poly.part01_basic.model.vo;
 
-public class Point {
-	
+public class Parent {
 	private int x;
 	private int y;
 	
-	public Point() {
-		
+	public Parent() {
+	
 	}
 	
-	public Point(int x, int y) {
+	public Parent(int x, int y) {
 		this.x = x;
 		this.y = y;
 	}
@@ -17,7 +16,6 @@ public class Point {
 	public int getX() {
 		return x;
 	}
-
 	public void setX(int x) {
 		this.x = x;
 	}
@@ -29,10 +27,10 @@ public class Point {
 	public void setY(int y) {
 		this.y = y;
 	}
-
-
-	public void draw() {
-		System.out.println("x좌표 : " + x + ", y좌표 : " + y);
+	
+	public void printParent() {
+		System.out.println("나는 부모다");
 	}
+	
 
 }

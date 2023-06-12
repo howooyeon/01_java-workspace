@@ -13,7 +13,7 @@ public class ObjectArrayRun {
 		Book[] books = new Book[3];
 		
 		// 3개의 도서에 대한 정보를 반복적으로 입력 받아 각 인덱스에 객체 생성
-		for(int i = 0; i < books.length; i++) { // for문 시작\
+		for(int i = 0; i < books.length; i++) { // for문 시작
 			System.out.println(i+1 + "번째 도서정보 입력");
 			System.out.print("도서명 : ");
 			String title = sc.nextLine();

@@ -10,7 +10,7 @@ public class Student extends Person{
 	
 	public Student(String name, int age, double height, double weight, int grade, String major) {
 		super(age, height, weight);
-		this.name = name;
+		super.name = name;
 		this.grade = grade;
 		this.major = major;
 		
@@ -32,6 +32,7 @@ public class Student extends Person{
 		this.major = major;
 	}
 	
+	@Override
 	public String toString() {
 		return super.toString() + ", 학년 : " + grade + ", 전공 : " + major;
 		

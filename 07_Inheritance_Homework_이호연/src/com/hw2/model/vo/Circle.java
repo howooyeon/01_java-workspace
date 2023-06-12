@@ -26,7 +26,7 @@ public class Circle extends Point {
 		double area = Math.PI * radius * radius;
 		double round = Math.PI * radius * 2;
 		System.out.printf("원의 면적 : %.1f \n", area);
-		System.out.printf("원의 면적 : %.1f \n", round);
+		System.out.printf("원의 둘레 : %.1f \n", round);
 	}
 
 }
