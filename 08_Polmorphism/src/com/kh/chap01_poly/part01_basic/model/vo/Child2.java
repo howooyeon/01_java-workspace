@@ -24,5 +24,10 @@ public class Child2 extends Parent{
 		System.out.println("나는 두번째 자식이다.");
 	}
 	
+	@Override
+	public void print() {
+		System.out.println("나는 두번째 자식이다.");
+	}
+	
 	
 }

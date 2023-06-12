@@ -29,7 +29,11 @@ public class Parent {
 	}
 	
 	public void printParent() {
-		System.out.println("나는 부모다");
+		System.out.println("나 부모야");
+	}
+	
+	public void print() {
+		System.out.println("나 부모야");
 	}
 	
 
