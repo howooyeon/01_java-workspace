@@ -1,4 +1,4 @@
-package com.kh.chap01_poly.part02_electronic.run;
+package com.kh.chap01_poly.part02_electronic.controller;
 
 import com.kh.chap01_poly.part02_electronic.model.vo.Electronic;
 
