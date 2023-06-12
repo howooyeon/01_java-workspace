@@ -95,6 +95,7 @@ public class CompExample {
 				System.out.println("잘못된 대답입니다. 다시 입력해주세요.");
 				System.out.println();
 			}
+			sc.close();
 		}
 	}
 }

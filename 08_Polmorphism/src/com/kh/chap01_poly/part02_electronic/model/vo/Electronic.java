@@ -1,4 +1,4 @@
-package com.kh.chap01.poly.part02_electronic.model.vo;
+package com.kh.chap01_poly.part02_electronic.model.vo;
 
 public class Electronic {
 	private String brand;
