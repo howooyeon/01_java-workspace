@@ -20,7 +20,7 @@ public class ElectronicShop1 {
 	
 	// 얘네 이거 다 오버로딩~!
 	public void insert(Desktop d) { // Desktop d = new Desktop(~~~~~~)
-		desk = d;
+		desk = d; // 이름만 바뀐거지 Desktop이다
 	}
 	public void insert(NoteBook n) { // Desktop d = new Desktop(~~~~~~)
 		note = n;
