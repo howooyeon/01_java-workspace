@@ -1,6 +1,6 @@
 package com.kh.chap02_inherit.model.vo;
 
-public class Vehicle {
+public /*abstract*/ class Vehicle {
 	private String name;
 	private double mileage;
 	private String kind;

@@ -3,6 +3,7 @@ package com.kh.chap02_inherit.run;
 import com.kh.chap02_inherit.model.vo.Airplane;
 import com.kh.chap02_inherit.model.vo.Car;
 import com.kh.chap02_inherit.model.vo.Ship;
+import com.kh.chap02_inherit.model.vo.Vehicle;
 
 public class InheritRun /* extends Object */{
 
