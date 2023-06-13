@@ -56,7 +56,7 @@ public class B_StringMethodTest {
 		// 2. contains 함수 이용하여 ! 가 포함돼 있는지 여부 추출 => str0 d에 ! 가 포함되어 있습니까? true
 		
 //		String str0 = str1.substring(6,10);
-//		System.out.println(str0.concat("!"));
+//		System.out.println(str0.concat("!")); 
 //		System.out.println(str0.contains("!"));
 		
 		String str0 = str1.substring(6,10).concat("!");
