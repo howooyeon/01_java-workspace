@@ -4,7 +4,7 @@ public class A_StringPoolTest {
 
 	public void method1() {
 
-//	String s = "안뇽";	// 참조자료형
+//	String s = "안뇽";	// 참조 자료형 **
 //	int a = 10; 		// 기본 자료형
 
 		// 1. 생성자를 통한 문자열 생성

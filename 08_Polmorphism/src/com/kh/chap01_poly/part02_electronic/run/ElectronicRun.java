@@ -1,5 +1,6 @@
 package com.kh.chap01_poly.part02_electronic.run;
 
+import com.kh.chap01_poly.part02_electronic.controller.ElectronicShop1;
 import com.kh.chap01_poly.part02_electronic.controller.ElectronicShop2;
 import com.kh.chap01_poly.part02_electronic.model.vo.Desktop;
 import com.kh.chap01_poly.part02_electronic.model.vo.Electronic;
@@ -12,17 +13,17 @@ public class ElectronicRun {
 		// 실행용 클래스는 납품 업체라고 생각!
 		
 		// 1. 다형성을 적용 안 했을 경우(ElctronicShop1)
-//		ElectronicShop1 es = new ElectronicShop1();
-//		// es에서 마련해놓은 desk, note, tab이라는 필드에
-//		// 객체를 생성해서 넣어주기 위해서 우선 es 생성!
-//		
-//		// 메소드를 써서 생성하겠음
-//		// 먼저 필요한 메소드를 생각해보자
-//		
-//		// 아직은 없는 메소드
-//		// 추가용 메소드 => insert
-//		// desktop이라는 객체를 생성해서 넘기는 메소드
-//		
+		// ElectronicShop1 es = new ElectronicShop1();
+		// es에서 마련해놓은 desk, note, tab이라는 필드에
+		// 객체를 생성해서 넣어주기 위해서 우선 es 생성!
+		
+		// 메소드를 써서 생성하겠음
+		// 먼저 필요한 메소드를 생각해보자
+		
+		// 아직은 없는 메소드
+		// 추가용 메소드 => insert
+		// desktop이라는 객체를 생성해서 넘기는 메소드
+		
 //		es.insert(new Desktop("삼성", "데스크탑", 120000, "GTX1070"));
 //		
 //		// 노트북이라는 객체를 생성해서 넘기는 메소드
@@ -34,7 +35,8 @@ public class ElectronicRun {
 //		// 가게에 해당 객체들이 잘 생성돼 있는지를 확인해보자
 //		// 조회용 메소드 => select();
 //		
-//		// String desk = es.selectDesktop();
+//		//String desk = es.selectDesktop(); //자료형 분명히 Desktop인데 String으로 할라는 장난질하지 않기^^~
+//		
 //		Desktop d = es.selectDesktop();
 //		NoteBook n = es.selectNoteBook();
 //		Tablet t = es.selectTablet();
@@ -43,6 +45,10 @@ public class ElectronicRun {
 //		System.out.println(n);
 //		System.out.println(t);
 //		
+//		System.out.println("==============================================================");
+		
+		
+		
 		// 2. 다형성 적용했을 경우(ElectronicShop2)
 		ElectronicShop2 es = new ElectronicShop2();
 		
@@ -68,7 +74,7 @@ public class ElectronicRun {
 		
 		Electronic d = es.select(0);
 		Electronic n = es.select(1);
-		Electronic t = es.select(2);
+		Electronic t = es.select(2); // 이건 왜 뭔데 번호가 들어간거지...? 매개변수로 날라가서 인덱스안에 값이 넣어지는거?
 		
 		// 이런걸 다운캐스팅 이라고 한다.
 		

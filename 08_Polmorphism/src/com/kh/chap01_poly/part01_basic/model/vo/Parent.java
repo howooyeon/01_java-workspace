@@ -36,5 +36,6 @@ public class Parent {
 		System.out.println("나 부모야");
 	}
 	
+	
 
 }
