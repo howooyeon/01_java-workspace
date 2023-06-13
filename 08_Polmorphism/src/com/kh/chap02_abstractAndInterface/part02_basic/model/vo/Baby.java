@@ -1,6 +1,6 @@
 package com.kh.chap02_abstractAndInterface.part02_basic.model.vo;
 
-public class Baby extends Person {
+public class Baby extends Person implements Basic{ // 상속 => 단일상속 | 다중상속 => 인터페이스
 
 	public Baby() {
 

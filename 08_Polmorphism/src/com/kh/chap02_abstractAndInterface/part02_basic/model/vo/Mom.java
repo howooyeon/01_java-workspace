@@ -1,6 +1,6 @@
 package com.kh.chap02_abstractAndInterface.part02_basic.model.vo;
 
-public class Mom extends Person{
+public class Mom extends Person implements Basic{
 	private String babyBirth; 			// 아이의 탄생 	출산 | 입양 | 없음
 	
 	public Mom() {
