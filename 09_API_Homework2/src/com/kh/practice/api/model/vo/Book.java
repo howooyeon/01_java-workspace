@@ -3,6 +3,7 @@ package com.kh.practice.api.model.vo;
 import java.util.Date;
 
 public class Book {
+
 	private String title;
 	private String author;
 	private String publisher;
@@ -64,8 +65,8 @@ public class Book {
 
 	@Override
 	public String toString() {
-		return "Book [getTitle()=" + getTitle() + ", getAuthor()=" + getAuthor() + ", getPublisher()=" + getPublisher()
-				+ ", getPublishDate()=" + getPublishDate() + ", getPrice()=" + getPrice() + "]";
+		return "책제목 : " + title + ", 작가 : " + author + ", 출판사 : " + publisher + ", 출판일 : "
+				+ publishDate + ", 금액 : " + price;
 	}
 	
 	
