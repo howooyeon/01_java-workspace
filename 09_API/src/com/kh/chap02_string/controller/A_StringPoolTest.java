@@ -37,9 +37,13 @@ public class A_StringPoolTest {
 	public void method2() {
 		String str = new String("Hello");
 		// 2. 문자열을 리터럴값으로 생성
-		String str1 = "hello";
+		String str1 = "hello"; 
 		String str2 = "hello";
+		
+		// new 말고 리터럴값 "hello"
+		
 		// String  pool : 동일한 문자열을 가질 수 없음
+		// 똑같은 문자네? 그럼 같은 주소값 참조해~ (바라봐)
 		
 		
 		System.out.println(str1/*.toString()*/);
@@ -48,20 +52,21 @@ public class A_StringPoolTest {
 		System.out.println(str1.hashCode());
 		System.out.println(str2.hashCode());
 
-		System.out.println(str1 == str2); // 엥? true! (주소값 일치함)
+		System.out.println(str1 == str2); // 엥? true! (주소값 일치함) // 같은 주소값을 참조하고 있기 때문
 		
 		// String  pool : 동일한 문자열을 가질 수 없음
 		System.out.println(System.identityHashCode(str1));
 		System.out.println(System.identityHashCode(str2));
 		System.out.println(System.identityHashCode(str));
+		// str은 new 생성자를 통해 만들어서 주소값 다를 것
 		
 		String str3 = "hi";
-		System.out.println(str1 == str3);
+		System.out.println(str1 == str3); // false
 		System.out.println(System.identityHashCode(str3));
 		
 		// String 클래스 == 불변 클래스(변하지 않는 클래스)
 		// 그럼 값을 못 바꾸는 건가요? 그건 아님..
-		// 변경이 가능하긴 하나 그 자리에서 수정되는 개념 아님!
+		// 변경이 가능하긴 하나 그 자리에서 수정되는 개념 아님! -> 주소값을 새로 받는다는 뜻
 		
 		str3 = "bye";
 		System.out.println(System.identityHashCode(str3));
