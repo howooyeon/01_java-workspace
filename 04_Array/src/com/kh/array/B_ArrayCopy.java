@@ -14,9 +14,9 @@ public class B_ArrayCopy {
 			System.out.print(origin[i] + " ");
 		}
 		System.out.println();
+		
 		// 단순하게 origin을 다시 대입시킨 copy 배열 셋팅
-
-		int[] copy = origin;
+		int[] copy = origin; // origin 주소값이었나?
 		System.out.println("===복사본 배열 출력===");
 		for (int i = 0; i < copy.length; i++) {
 			System.out.print(copy[i] + " ");
@@ -31,13 +31,15 @@ public class B_ArrayCopy {
 		for (int i = 0; i < origin.length; i++) {
 			System.out.print(origin[i] + " ");
 		}
+		
 		System.out.println();
+		
 		// 단순하게 origin을 다시 대입시킨 copy 배열 셋팅
-
 		System.out.println("===복사본 배열 출력===");
 		for (int i = 0; i < copy.length; i++) {
 			System.out.print(copy[i] + " ");
 		}
+		
 		System.out.println();
 
 		// copy[2]를 가지고 수정해도 원본까지 변경되어 있음
@@ -69,6 +71,7 @@ public class B_ArrayCopy {
 		for (int i = 0; i < copy.length; i++) {
 			copy[i] = origin[i];
 		}
+		
 		copy[2] = 99;
 
 		System.out.println("------- 복사본 배열 값 변경 후 -------");
@@ -123,8 +126,8 @@ public class B_ArrayCopy {
 		int[] origin = { 1, 2, 3, 4, 5 };
 		// 복사본 배열 = Arrays.copyOf(원본배열명, 복사할 길이);
 		// int [] copy = Arrays.copyOf(origin, 5);
-		// int [] copy = Arrays.copyOf(origin, 3);
-		int[] copy = Arrays.copyOf(origin, 10);
+		int[] copy = Arrays.copyOf(origin, 3);
+		// int[] copy = Arrays.copyOf(origin, 10);
 
 		/*
 		 * [참고] java.lang.Math java.lang.String java.lang.System => java.lang 패키지에 있는
@@ -154,7 +157,7 @@ public class B_ArrayCopy {
 
 	public void method5() {
 		// 4. clone() 메소드를 이용한 복사
-		// 인덱스 지정불가, 크기 지정 별도로 못함
+		// 인덱스 지정불가, **크기 지정 별도로 못함**
 
 		int[] origin = { 1, 2, 3, 4, 5 };
 		// 복사본 배열 = 원본배열.clone();

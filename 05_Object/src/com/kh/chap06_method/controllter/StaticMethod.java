@@ -48,7 +48,7 @@ public class StaticMethod {
 		}
 		 */
 		
-		return str1.equals(str2); // return값은 출력해야만 확인 가능
+		return str1.equals(str2); // return값은 출력해야만 확인 가능, 코드 한줄로 줄인 거임
 	
 	}
 

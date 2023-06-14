@@ -40,11 +40,11 @@ public class TokenMenu {
 		System.out.println("토큰 처리 전 글자 : " + str);
 		System.out.println("토큰 처리 전 개수 : " + str.length());
 		// TokenController(tc)의 afterToken()의 반환값을 가지고
-		String str1 = tc.afterToken(str);
+		str = tc.afterToken(str);
 		// 토큰 처리 후 글자, 토큰 처리 후 개수, 모두 대문자로 변환한 것을 출력
-		System.out.println("토큰 처리 후 글자 : " + str1);
-		System.out.println("토큰 처리 후 개수: " + str1.length());
-		System.out.println("모두 대문자로 변환 : " + str1.toUpperCase());
+		System.out.println("토큰 처리 후 글자 : " + str);
+		System.out.println("토큰 처리 후 개수: " + str.length());
+		System.out.println("모두 대문자로 변환 : " + str.toUpperCase());
 	}
 
 	
@@ -56,7 +56,7 @@ public class TokenMenu {
 		// 찾을 문자를 하나 입력하세요 : 
 		System.out.print("찾을 문자를 하나 입력하세요 : ");
 		char find = sc.nextLine().charAt(0);
-		System.out.println(str1);
+		//System.out.println(str1);
 		// tc에 findChar()로 위에 입력 받은 문자열과 방금 받은 문자를 인자로 넘겨
 		// 반환 값 출력
 		System.out.println(find + " 문자가 들어간 개수 : " + tc.findChar(str1, find));

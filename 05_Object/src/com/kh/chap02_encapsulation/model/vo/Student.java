@@ -3,7 +3,7 @@ package com.kh.chap02_encapsulation.model.vo;
 public class Student { // 나만의 자료형
 	
 	// 필드부
-	// 접근 제한자 자료형 변수명
+	// 접근제한자 자료형 변수명
 	
 	private String name;
 	private int age;
@@ -17,7 +17,6 @@ public class Student { // 나만의 자료형
 	 * 접근제어자 [예약어] 반환형 메소드명([매개변수]){
 	 * ... 실행할 코드
 	 * }
-	 * 
 	 * 
 	 */
 	

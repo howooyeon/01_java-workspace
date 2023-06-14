@@ -162,8 +162,10 @@ public class A_Array {
 		
 		// 값 출력
 		for(int i = 0; i < 10; i++) {
-			System.out.println(arr[i]);
+			System.out.print(arr[i]);
 		}
+		
+		System.out.println();
 		
 		System.out.println(arr); // 배열의 자료형 + @ + 주소값의 16진수 형태
 		System.out.println(arr.hashCode()); // 주소값의 10진수 형태
@@ -181,15 +183,15 @@ public class A_Array {
 		// 배열 쓰면서 볼 수 있는 오류들 모음
 		// int[] arr; // 크기 지정 까먹은 경우
 		
-		int[] arr = null; // 아무것도 참조하고 있지 않음
+		int[] arr = null;// 아무것도 참조하고 있지 않음
 		
 		System.out.println(arr); // 선언만 한 경우  => 초기화 안 돼 있어서 오류남
 		
 		// null을 가지고 메소드를 호출한다거나 특정 어딘가에 접근하고자 한다면
 		// 항상 오류 발생 ! => NullPointerException
-		//System.out.println(arr.hashCode());
-		//System.out.println(arr.length);
-		//System.out.println(arr[0]);
+		// System.out.println(arr.hashCode());
+		// System.out.println(arr.length);
+		// System.out.println(arr[0]);
 		
 	}
 	
@@ -238,7 +240,6 @@ public class A_Array {
 		 * => 자바에서의 "자동 메모리 관리" 특징!! => 개발자가 코드작성에만 신경쓸 수 있음
 		 * 
 		 * 배열을 강제로 삭제 시키고자 한다면? ==> 연결고리를 끊으면 됨!
-		 * 
 		 * 
 		 */
 		arr = null; // 아무것도 참조하지 않겠다!!
