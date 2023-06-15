@@ -14,6 +14,7 @@ public class Run {
 		// 1. 도서 전체 출력
 		System.out.println("-----------1. 기존의 전체 도서 추가----------");
 		bc.printAll();
+		System.out.println();
 		
 		// 2_1. 추가할 도서 입력 받기
 		System.out.println("-----------2. 새로운 도서 추가----------");
@@ -30,6 +31,7 @@ public class Run {
 		
 		// 2_2. 입력받은 값들을 BookController의 insertBook() 메소드로 전달
 		bc.insertBook(newTitle, newAuthor, newPublisher, newDate, newPrice);
+		System.out.println();
 		
 		// 3. 5번째 도서 출간일 출력
 		System.out.println("---------3. 5번째 도서 출간일 출력---------");
@@ -43,6 +45,7 @@ public class Run {
 		
 		// searchBook(searchTitle) 메소드 호출
 		bc.searchBook(searchTitle);
+		
 	}
 
 }

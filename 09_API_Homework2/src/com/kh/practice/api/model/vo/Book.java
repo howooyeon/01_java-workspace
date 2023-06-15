@@ -1,5 +1,6 @@
 package com.kh.practice.api.model.vo;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Book {
@@ -14,11 +15,11 @@ public class Book {
 		
 	}
 	
-	public Book(String title, String author, String publisher, Date publishDate, int price) {
+	public Book(String title, String author, String publisher, java.util.Date publishDate, int price) {
 		this.title = title;
 		this.author = author;
 		this.publisher = publisher;
-		this.publishDate = publishDate;
+		this.publishDate = (Date)publishDate;
 		this.price = price;
 	}
 	
@@ -65,15 +66,15 @@ public class Book {
 
 	@Override
 	public String toString() {
-		return "책제목 : " + title + ", 작가 : " + author + ", 출판사 : " + publisher + ", 출판일 : "
-				+ publishDate + ", 금액 : " + price;
+		if (publishDate != null) {
+			SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy년 MM월 dd일");
+			// return dateFormat.format(publishDate);
+			return "[title=" + title + ", author=" + author + ", publicher=" + publisher + ", publichDate="
+					+ dateFormat.format(publishDate) + ", price=" + price + "]";
+		}
+
+		return "";
+
 	}
-	
-	
-	
-	
-	
-	
-	
 
 }
