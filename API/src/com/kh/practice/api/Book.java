@@ -1,10 +1,9 @@
-package com.kh.practice.api.model.vo;
+package com.kh.practice.api;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Book {
-
 	private String title;
 	private String author;
 	private String publisher;
@@ -15,14 +14,13 @@ public class Book {
 		
 	}
 	
-	public Book(String title, String author, String publisher, java.util.Date publishDate, int price) {
+	public Book(String title, String author, String publisher, Date publishDate, int price) {
 		this.title = title;
 		this.author = author;
 		this.publisher = publisher;
-		this.publishDate = (Date)publishDate;
+		this.publishDate = publishDate;
 		this.price = price;
 	}
-	
 
 	public String getTitle() {
 		return title;
@@ -66,18 +64,13 @@ public class Book {
 
 	@Override
 	public String toString() {
-		if (publishDate != null) {
-			SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy년 MM월 dd일");
-			// return dateFormat.format(publishDate);
-			return "[title=" + title + ", author=" + author + ", publicher=" + publisher + ", publishDate="
-					+ dateFormat.format(publishDate) + ", price=" + price + "]";
-		}
-
-		return "";
-
+		SimpleDateFormat dateformat = new SimpleDateFormat("yyyy년 mm월 dd일");
+		return "Book [title=" + title + ", author=" + author + ", publisher=" + publisher + ", publishDate="
+				+ dateformat.format(publishDate) + ", price=" + price + "]";
+		
 	}
 	
 	
 	
-
+	
 }

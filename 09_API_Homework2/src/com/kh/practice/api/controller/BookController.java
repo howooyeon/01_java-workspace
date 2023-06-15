@@ -2,6 +2,7 @@ package com.kh.practice.api.controller;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.StringTokenizer;
 
 import com.kh.practice.api.model.vo.Book;
 
@@ -35,13 +36,32 @@ public class BookController {
 		for (int i = 0; i < bk.length; i++) {
 			System.out.println(bk[i]);
 		}
+		
+//		for(Book b : bk) {
+//			System.out.println(b);
+//		}
+		
 	}
 
-	public void insertBook(String newTitle, String newAuthor, String newPublisher, String newDate, String newPrice) { // 도서
-		// 메소드
-		// 1. 매개변수로 전달받은 newPrice값 ==> String --> int로 변환작업 (int price라는 변수에 담으시오) :
+	public void insertBook(String newTitle, String newAuthor, String newPublisher, String newDate, String newPrice) {
+		// 1. 매개변수로 전달받은 newPrice값 ==> String --> int로 변환작업 (int price라는 변수에 담으시오)
 		// "20000" --> 20000
 		int price = Integer.parseInt(newPrice);
+
+		// 2. 매개변수로 전달받은 newDate값 ==> String --> Date로 변환 작업 (Date publishDate에 담으시오)
+
+		// '-'를 구분자로 StringTokenizer를 이용하여 문자열 분리 후 각각 년,월,일 을 Date에 적용
+		// 1) StringTokenizer를 이용한 방법
+		// 1_1) StringTokenizer를 이용하여 먼저 "2020-07-01" 을 각각 문자열로 분리("2020", "07", "01")
+//		StringTokenizer stn = new StringTokenizer(newDate, "-");
+//
+//		// 1_2) 각 분리된 문자열들을 매번 뽑아서 int 변수들에 담기
+//		// 1_3) year, month, date 가지고 Date객체 생성하기
+//		int year = Integer.parseInt(stn.nextToken());
+//		int month = Integer.parseInt(stn.nextToken());
+//		int date = Integer.parseInt(stn.nextToken());
+//
+//		Date publishDate = new Date(year - 1900, month - 1, date);
 
 		// 2. 매개변수로 전달받은 newDate값 ==> String --> Date로 변환 작업 (Date publishDate에 담으시오)
 
@@ -63,12 +83,18 @@ public class BookController {
 		Book[] newArray = new Book[bk.length + 1];
 
 		// 기존 배열의 요소들을 새로운 배열로 복사
-		for (int i = 0; i < bk.length; i++) {
-			newArray[i] = bk[i];
+//		for (int i = 0; i < bk.length; i++) {
+//			newArray[i] = bk[i];
+//		}
+		
+		int count = 0;
+		for(Book a : bk) {
+			newArray[count] = bk[count];
+			count++;
 		}
 
 		// 새로운 요소를 추가
-		newArray[bk.length] = new Book(newTitle, newAuthor, newPublisher, publishDate, price);
+		newArray[bk.length] = newBook;
 
 		// 기존 배열을 새로운 배열로 업데이트
 		bk = newArray;
@@ -85,12 +111,9 @@ public class BookController {
 		Date publishDate = bk[5].getPublishDate();
 
 		// SimpleDateFormat을 이용하여 출력
-		if (publishDate != null) {
-			String formattedDate = dateFormat.format(publishDate);
-			System.out.println(formattedDate);
-		} else {
-			System.out.println("출간일 정보 없음");
-		}
+		String formattedDate = dateFormat.format(publishDate);
+		System.out.println(formattedDate);
+
 		System.out.println();
 	}
 
