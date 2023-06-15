@@ -70,12 +70,7 @@ public class AbstrationRun {
 	 *
 	 *	
 	 *		Student라는 클래스로 만들꺼임! => 객체의 정보를 보관할 그릇과도 같은 이런 클래스들은 => model.vo라는 패키지에 보관
-	 *	 
-	 * 		
-	 * 	
-	 * 
-	 * 
-	 * 
+	 *
 	 */
 	
 

@@ -8,7 +8,6 @@ public class ClassRun {
 	public static void main(String[] args) {
 		Product snack = new Product();
 
-		
 		snack.setpName("참크래커");
 		snack.setBrand("해태");
 		snack.setPrice(1200);
