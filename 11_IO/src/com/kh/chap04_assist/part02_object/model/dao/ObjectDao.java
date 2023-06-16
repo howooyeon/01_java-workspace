@@ -57,14 +57,12 @@ public class ObjectDao {
 			}
 		} catch (EOFException e) {
 		} catch (ClassNotFoundException e) {
-			e.printStackTrace();		
+			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
-		
+
 		}
-		
-		
+
 	}
-	
-	
+
 }
