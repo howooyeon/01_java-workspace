@@ -42,7 +42,7 @@ public class FileRun {
 			// 해당 파일 존재하면 그냥 덮어쓰기 된다. 수정사항 없으면 그대로 감
 			
 			System.out.println(f1.exists());
-			System.out.println(new File("ttt.text").exists());
+			System.out.println(new File("ttt.txt").exists());
 			
 			System.out.println(f1.isFile()); // 파일이냐?
 			System.out.println(tempFolder.isFile() );
