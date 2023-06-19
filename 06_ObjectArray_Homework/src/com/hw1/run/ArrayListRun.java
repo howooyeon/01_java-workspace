@@ -1,5 +1,6 @@
 package com.hw1.run;
 
+import java.io.ObjectInputStream.GetField;
 import java.util.ArrayList;
 
 import com.hw1.model.vo.Employee;
@@ -11,7 +12,7 @@ public class ArrayListRun {
 		
 		emp.add(new Employee());
 		emp.add(new Employee(1, "홍길동", 19, 'M', "01022223333", "서울 잠실"));
-		emp.add(new Employee(2, "강말순", "교육부", "강사", 20, 'F', 10000000, 0.01, "01011112222", "서울 마곡"));
+		emp.add(new Employee(2, "강말순", "교육부", "강사", 20, 'F', 1000000, 0.01, "01011112222", "서울 마곡"));
 		
 		System.out.println(emp.get(0).information());
 		System.out.println(emp.get(1).information());
@@ -45,9 +46,14 @@ public class ArrayListRun {
 		
 		for(Employee e : emp) {
 			e.setSalary((int) (e.getSalary() + ((e.getSalary() * e.getBonusPoint()))) * 12);
-			System.out.println(e.getEmpName() + "의 연봉 : " + e.getSalary() + "원");
-			System.out.println("직원들의 평균 연봉 : " + e.setSalary());			
+			System.out.println(e.getEmpName() + "의 연봉 : " + e.getSalary() + "원");		
 		}
+		
+		int total = 0;
+		for(Employee e : emp) {
+			total += e.getSalary();
+		}
+		System.out.println("직원들의 평균 연봉 : " + (total/ 3) + "원");	
 		
 	}
 

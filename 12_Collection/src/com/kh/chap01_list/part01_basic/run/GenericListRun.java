@@ -42,7 +42,6 @@ public class GenericListRun {
 		 * 
 		 * - 공부를 하는 효과적인 방법 객체배열을 다 컬렉션으로 바꾸는 것
 		 * 
-		 * 
 		 */
 		
 	}
