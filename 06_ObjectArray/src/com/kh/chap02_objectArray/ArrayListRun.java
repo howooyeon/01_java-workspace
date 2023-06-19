@@ -32,12 +32,13 @@ public class ArrayListRun {
 		// 사용자에게 구매하고자 하는 핸드폰명을 입력받아
 		Scanner sc = new Scanner(System.in);
 		System.out.print("구매할 핸드폰 명 : ");
-		String search = sc.nextLine();
+		String buy = sc.nextLine();
 		// 해당 휴대폰을 찾은 후에 그 가격을 알려
 
-		for (Phone p : list) {
-			if (p.getName().equals(search)) {
+		for (Phone p : list) { // p = list.get(0) => p = list.get(1) => p = list.get(2)
+			if (p.getName().equals(buy)) {
 				System.out.println(p.information());
+				System.out.println("당신이 구매하고자 하는 휴대폰의 가격은 " + p.getPrice() + "원 입니다.");
 			}
 		}
 
