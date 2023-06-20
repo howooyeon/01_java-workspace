@@ -31,6 +31,7 @@ public class SetRun {
 		System.out.println(hs1);
 		
 		HashSet<Student> hs2 = new HashSet<>();
+		
 		// 존잘월드 3명이 산다고 가정하자
 		hs2.add(new Student("공유", 43, 100));
 		hs2.add(new Student("차은우", 26, 85));

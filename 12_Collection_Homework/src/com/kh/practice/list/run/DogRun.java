@@ -26,7 +26,7 @@ public class DogRun {
 			System.out.print("강쥐 종 입력 : ");
 			String dogKind = sc.nextLine();
 			if (i == 4) {
-				System.out.println();
+				System.out.println(); 
 				list.add(2, new Dog(dogName, dogAge, dogKind));
 
 			} else {
