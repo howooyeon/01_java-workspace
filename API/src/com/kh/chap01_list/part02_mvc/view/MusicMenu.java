@@ -10,7 +10,7 @@ import com.kh.chap01_list.part02_mvc.model.vo.Music;
 /**
  * @author LHY
  * @since 2023.06.20
- * @version 1.0
+ * @version 2try
  *
  */
 
@@ -54,6 +54,7 @@ public class MusicMenu {
 				return;
 			default:
 				System.out.println("잘못 선택하셨습니다. 다시 선택해주세요.");
+				continue;
 
 			}
 
@@ -61,88 +62,69 @@ public class MusicMenu {
 
 	}
 
-	/**
-	 * 1. 새로운 곡 추가하는 서브화면
-	 */
 	public void insertMusic() {
-		System.out.println("\n=========새로운곡 추가=========");
-		System.out.print("제목을 입력해주세요 : ");
+		System.out.println("\n======== 새로운 곡 추가 =========");
+		System.out.print("제목 입력 : ");
 		String title = sc.nextLine();
-		System.out.print("가수명을 입력해주세요 : ");
+		System.out.print("가수 입력 : ");
 		String artist = sc.nextLine();
 		
 		mc.insertMusic(title, artist);
-		System.out.println("성공적으로 곡이 추가되었습니다.");
-		
 	}
-
-	/**
-	 * 2. 전체곡 조회용 서브화면
-	 */
-	public void selectMusic() {
-		System.out.println("\n=========전체 곡 조회=========");
-		ArrayList<Music> list = mc.selectMusic();
-
+	
+	private void selectMusic() {
+		System.out.println("\n======== 전체곡 리스트 조회 =========");
+		ArrayList<Music> list = mc.selectMusic(); //?
+		
 		if (list.isEmpty()) {
-			System.out.println("현재 존재하는 곡이 없습니다.");
+			System.out.println("현재 담겨있는 곡이 없습니다.");
 		} else {
 			for (int i = 0; i < list.size(); i++) {
 				System.out.println(list.get(i));
 			}
 		}
-
 	}
 
-	/**
-	 * 3. 음악 삭제하는 서브화면
-	 */
-	public void deleteMusic() {
-		System.out.println("\n=========음악 삭제=========");
+	private void deleteMusic() {
+		System.out.println("\n======== 특정 곡 삭제 =========");
 		System.out.print("삭제하고자 하는 곡명 : ");
 		String title = sc.nextLine();
 		
 		int result = mc.deleteMusic(title);
-		
-		if (result == 1) {
-			System.out.println("음악이 삭제 되었습니다.");
-			selectMusic();
+		if(result == 1) {
+			System.out.println("삭제 되었습니다.");
 		} else {
-			System.out.println("삭제할 음악을 찾지 못했습니다.");
+			System.out.println("해당 곡을 찾지 못했습니다.");
 		}
+		
 	}
 
-	/**
-	 * 4. 특정 곡을 검색하는 서브화면
-	 */
-	public void searchMusic() {
-		System.out.println("\n=========음악 검색=========");
+
+	private void searchMusic() {
+		System.out.println("\n======== 특정 곡 검색 =========");
 		System.out.print("검색할 음악을 입력해주세요(키워드 가능) : ");
 		String title = sc.nextLine();
 		
-		ArrayList<Music> searchList = mc.searchMusic(title);
+		ArrayList<Music> searchList = mc.searchMusic(title);  
 		
 	}
 
-	/**
-	 * 5. 특정 곡 수정하는 서브화면
-	 */
-	public void updateMusic() {
-		System.out.println("\n=========곡 수정=========");
-		System.out.print("수정하고자 하는 곡명 : ");
+	private void updateMusic() {
+		System.out.println("\n======== 특정 곡 수정 =========");
+		System.out.print("수정할 곡명 : ");
 		String title = sc.nextLine();
-		System.out.print("수정 내용 가수 : ");
+		System.out.print("수정 내용(가수) : ");
 		String upArtist = sc.nextLine();
-		System.out.print("수정 내용 곡명: ");
+		System.out.print("수정 내욕(곡명) : ");
 		String upTitle = sc.nextLine();
 		
 		int result = mc.updateMusic(title, upArtist, upTitle);
 		
 		if(result > 0) {
-			System.out.println("성공적으로 수정되었습니다");
+			System.out.println("성공적으로 수정하였습니다.");
 		} else {
 			System.out.println("수정할 곡을 찾지 못했습니다.");
 		}
 		
 	}
-
 }

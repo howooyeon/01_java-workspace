@@ -163,7 +163,7 @@ public class MusicMenu {
 	 * 5. 특정 곡 수정하는 서브화면
 	 */
 	public void updateMusic() {
-		System.out.println("\n======= 특정 곡 검색 ========");
+		System.out.println("\n======= 특정 곡 수정 ========");
 		System.out.print("수정 하고자 하는 곡명 : ");
 		String title =sc.nextLine();
 		
@@ -179,7 +179,7 @@ public class MusicMenu {
 		if(result > 0) {
 			System.out.println("성공적으로 수정되었습니다");
 		} else {
-			System.out.println("수정할 곡을 찾지 못했습니다.ㅣ");
+			System.out.println("수정할 곡을 찾지 못했습니다.");
 		}
 		
 		// 추가수정삭제 : 반환형 int
