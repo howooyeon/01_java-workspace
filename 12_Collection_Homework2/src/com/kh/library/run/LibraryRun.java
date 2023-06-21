@@ -1,6 +1,5 @@
 package com.kh.library.run;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -129,7 +128,7 @@ public class LibraryRun {
 				Boolean bkOrMaga = sc.nextBoolean();
 				
 				if (bkOrMaga.equals(true)) {
-					
+					bc.addBook(new Book(bNo, title, author, publisher, price, description));
 				} else if (bkOrMaga.equals(false)) {
 					System.out.print("출간연도를 입력하세요 : ");
 					int year = sc.nextInt();
@@ -137,7 +136,6 @@ public class LibraryRun {
 					System.out.print("출간월을 입력하세요 : ");
 					int month = sc.nextInt();
 					sc.nextLine();
-					
 				}
 
 				break;
@@ -165,7 +163,6 @@ public class LibraryRun {
 				} else if (search == 2) { // 책 제목으로 책 찾기
 					System.out.print("책 제목을 입력하세요 : ");
 					title = sc.nextLine();
-					
 					ArrayList<Book> temp = bc.searchBookByTitle(title);
 					System.out.println(temp);
 					
@@ -173,16 +170,20 @@ public class LibraryRun {
 					System.out.print("출간연도를 입력하세요 : (올해 --> 2022) : ");
 					int year = sc.nextInt();
 					sc.nextLine();
-					//magazineOfThisYearInfo()
+					ArrayList<Book> temp = bc.magazineOfThisYearInfo(year);
+					System.out.println(temp);
+					
 				} else if (search == 4) { // 4. 출판사로 책 찾기
 					System.out.print("출판사를 입력하세요 : ");
 					publisher = sc.nextLine();
-					//bc.searchBookByPublisher()
+					ArrayList<Book> temp = bc.searchBookByPublisher(publisher);
+					System.out.println(temp);
 				} else if (search == 5) { // 5. 특정 가격 밑으로 책 찾기
 					System.out.print("가격을 입력하세요 : ");
 					price = sc.nextInt();
 					sc.nextLine();
-					//bc.searchBookByPrice()
+					System.out.println(bc.searchBookByPrice(price));
+					//
 				} else if (search == 6)
 					flag = true; // 6. 이전으로
 				else
@@ -191,8 +192,11 @@ public class LibraryRun {
 				break;
 				
 			case 4:// 4. 전체책 가격 합계 및 평균 조회
-				System.out.println("전체책 가격 합계 : " );
-				System.out.println("전체책 가격 평균 : " );
+				System.out.print("전체책 가격 합계 : " );
+				System.out.println(bc.getTotalPrice());
+				
+				System.out.print("전체책 가격 평균 : " );
+				System.out.println(bc.getAvgPrice());
 				break;
 				
 			case 5: 
