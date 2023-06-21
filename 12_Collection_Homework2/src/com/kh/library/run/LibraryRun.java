@@ -64,7 +64,7 @@ public class LibraryRun {
 				System.out.println("3. 잡지만 조회하기(일반도서 제외)");
 				System.out.println("4. 이전으로");
 				System.out.println("===============================");
-
+-
 
 				System.out.print("메뉴번호를 입력해주세요 : ");
 				int search = sc.nextInt();
