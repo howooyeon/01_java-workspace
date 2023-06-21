@@ -1,6 +1,5 @@
 package com.kh.chap01_poly.part02_electronic.run;
 
-import com.kh.chap01_poly.part02_electronic.controller.ElectronicShop1;
 import com.kh.chap01_poly.part02_electronic.controller.ElectronicShop2;
 import com.kh.chap01_poly.part02_electronic.model.vo.Desktop;
 import com.kh.chap01_poly.part02_electronic.model.vo.Electronic;

@@ -78,23 +78,23 @@ public class MethodRun {
 	   }
 	
 	// -------------- OverloadingTest -----------------
-	OverloadingTest ot = new OverloadingTest();
-	ot.test(0);	
-	ot.test(10);
-	ot.test(10, ""); // ** 시험 문제!!!!!!!!!!!
-	ot.test("",10);
-	ot.test(10, 10);
-	ot.test("차은우");
-	
-	// 오버로딩의 대표적인 예 => print()
-	
-	System.out.println(10);
-	System.out.println("ㄴㄴ");
-	System.out.println(0.0);
+//	OverloadingTest ot = new OverloadingTest();
+//	ot.test(0);	
+//	ot.test(10);
+//	ot.test(10, ""); // ** 시험 문제!!!!!!!!!!!
+//	ot.test("",10);
+//	ot.test(10, 10);
+//	ot.test("차은우");
+//	
+//	// 오버로딩의 대표적인 예 => print()
+//	
+//	System.out.println(10);
+//	System.out.println("ㄴㄴ");
+//	System.out.println(0.0);
 
 	
 	
 	
 	}
 
-}
+

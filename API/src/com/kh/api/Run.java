@@ -1,4 +1,4 @@
-package com.kh.practice.api;
+package com.kh.api;
 
 import java.util.Scanner;
 

@@ -1,25 +1,31 @@
-package com.kh.api;
-
-import java.text.SimpleDateFormat;
-import java.util.Date;
+package com.kh.library.model.vo;
 
 public class Book {
+	private String bNo;
 	private String title;
 	private String author;
 	private String publisher;
-	private Date publishDate;
 	private int price;
+	private String description;
 	
-	public Book() {
-		
-	}
-	
-	public Book(String title, String author, String publisher, Date publishDate, int price) {
+	public Book() {}
+
+	public Book(String bNo, String title, String author, String publisher, int price, String description) {
+		super();
+		this.bNo = bNo;
 		this.title = title;
 		this.author = author;
 		this.publisher = publisher;
-		this.publishDate = publishDate;
 		this.price = price;
+		this.description = description;
+	}
+	
+	public String getbNo() {
+		return bNo;
+	}
+
+	public void setbNo(String bNo) {
+		this.bNo = bNo;
 	}
 
 	public String getTitle() {
@@ -46,14 +52,6 @@ public class Book {
 		this.publisher = publisher;
 	}
 
-	public Date getPublishDate() {
-		return publishDate;
-	}
-
-	public void setPublishDate(Date publishDate) {
-		this.publishDate = publishDate;
-	}
-
 	public int getPrice() {
 		return price;
 	}
@@ -62,15 +60,21 @@ public class Book {
 		this.price = price;
 	}
 
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
 	@Override
 	public String toString() {
-		SimpleDateFormat dateformat = new SimpleDateFormat("yyyy년 mm월 dd일");
-		return "Book [title=" + title + ", author=" + author + ", publisher=" + publisher + ", publishDate="
-				+ dateformat.format(publishDate) + ", price=" + price + "]";
-		
+		return "Book [bNo=" + bNo + ", title=" + title + ", author=" + author + ", publisher=" + publisher + ", price="
+				+ price + ", description=" + description + "]";
 	}
+
 	
 	
-	
-	
+
 }
