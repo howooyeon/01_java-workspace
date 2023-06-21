@@ -25,7 +25,7 @@ public class ClientProgram {
 		String serverIP;
 		
 		try {
-			serverIP = "192.168.20.38";
+			serverIP = "192.168.0.4";
 			// 1) 서버에 연결 요청 보내는 구문(요청하고자 하는 서버의 IP 주소와 지정된 포트번호를 제시하면서 소켓 객체 생성)
 			socket = new Socket(serverIP, port);
 			// 서버꺼져있거나 못찾으면 (통신실패) null이 담김

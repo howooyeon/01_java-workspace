@@ -29,8 +29,6 @@ public class LibraryRun {
 	}
 
 	public static void printBooks(ArrayList<Book> bs) {
-		
-		BookController service = BookController.getInstance();
 		// 여기서 메뉴열고 구현 시작
 		
 		BookController bc = new BookController();
@@ -111,7 +109,7 @@ public class LibraryRun {
 				String title = sc.nextLine();
 				
 				System.out.print("작가를 입력하세요 : ");
-				String author = sc.nextLine();
+				String author  = sc.nextLine();
 				
 				System.out.print("출판사를 입력하세요 : ");
 				String publisher = sc.nextLine();
@@ -136,6 +134,7 @@ public class LibraryRun {
 					System.out.print("출간월을 입력하세요 : ");
 					int month = sc.nextInt();
 					sc.nextLine();
+					bc.addBook(new Magazine(bNo, title, author, publisher, price, description, year, month));
 				}
 
 				break;

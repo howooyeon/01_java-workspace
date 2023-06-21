@@ -46,14 +46,14 @@ public class BookController implements BookManager {
 	@Override
 	public ArrayList<Book> onlySearchBook() {
 
-		ArrayList<Book> temp = new ArrayList<>();
+		ArrayList<Book> searBook = new ArrayList<>();
 		for (Book b : bList) {
 			if (b instanceof Magazine)
 				continue;
 			else
-				temp.add(b);
+				searBook.add(b);
 		}
-		return temp;
+		return searBook;
 	}
 
 	@Override

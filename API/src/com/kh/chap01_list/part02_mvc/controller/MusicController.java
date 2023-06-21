@@ -53,6 +53,7 @@ public class MusicController {
 			if(m.getTitle().equals(upArtist)) {
 				m.setTitle(upTitle);
 				m.setArtist(upArtist);
+				result = 1;
 			}
 		}
 
