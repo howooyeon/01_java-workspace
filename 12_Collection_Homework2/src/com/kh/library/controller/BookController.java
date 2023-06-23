@@ -22,7 +22,7 @@ public class BookController implements BookManager {
 
 	@Override
 	public Book searchBookBybNo(String bNo) {
-		Book b = null;
+		Book b = null; // 처음에 null로 초기화
 		for (int i = 0; i < bList.size(); i++) {
 			if (bList.get(i).getbNo().contains(bNo)) {
 				b = bList.get(i);
@@ -34,7 +34,7 @@ public class BookController implements BookManager {
 
 	@Override
 	public ArrayList<Book> searchBookByTitle(String title) {
-		ArrayList<Book> temp = new ArrayList<>();
+		ArrayList<Book> temp = new ArrayList<>(); //[책 1, 책 2] or []
 		for (int i = 0; i < bList.size(); i++) {
 			if (bList.get(i).getTitle().contains(title)) {
 				temp.add(bList.get(i));

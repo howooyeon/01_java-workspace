@@ -10,6 +10,9 @@ import com.kh.library.model.vo.Magazine;
 public class LibraryRun {
 
 	public static void main(String[] args) {// 소장책 DB
+		
+//		LibraryRun r = new LibraryRun();
+//		r.printBooks(null);
 		ArrayList<Book> bList = new ArrayList<>();
 		
 		{
@@ -156,7 +159,7 @@ public class LibraryRun {
 				if (search == 1) { // bNo으로 책 찾기
 					System.out.print("bNo을 입력하세요 : ");
 					bNo = sc.nextLine();
-					System.out.println(bc.searchBookBybNo(bNo));
+					System.out.println(bc.searchBookBybNo(bNo)); // null 이거나 책 한권
 					
 					
 				} else if (search == 2) { // 책 제목으로 책 찾기
