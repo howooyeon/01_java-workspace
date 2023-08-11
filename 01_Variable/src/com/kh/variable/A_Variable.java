@@ -13,7 +13,7 @@ public class A_Variable {
 		// 월급 = 시급 x 근무시간 x 근무일수
 		// 차은우 : 0000원 형식으로 출력하고 싶다
 		
-		System.out.println("차은우 : " + (9620 * 6 * 8) + "원");
+		System.out.println("차은우 : " + (9620 * 6 * 8)+ "원");
 		System.out.println("주지훈 : " + (9620 * 6 * 8)+ "원");		
 		System.out.println("이제훈 : " + (9620 * 6 * 8)+ "원");		
 		System.out.println("장원영 : " + (9620 * 6 * 8)+ "원");		
@@ -28,7 +28,7 @@ public class A_Variable {
 		// int pay = 20000; 중복됐기 때문에 안 됨
 		
 		
-		System.out.println("차은우 : " + (pay * day * time) + "원");
+		System.out.println("차은우 : " + (pay * day * time)+ "원");
 		System.out.println("주지훈 : " + (pay * day * time)+ "원");		
 		System.out.println("이제훈 : " + (pay * day * time)+ "원");		
 		System.out.println("장원영 : " + (pay * day * time)+ "원");		

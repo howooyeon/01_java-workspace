@@ -63,6 +63,4 @@ public class FieldTest1 { // 클래스 영역 시작
 	
 	
 	
-	
-	
 } // 클래스 영역 끝

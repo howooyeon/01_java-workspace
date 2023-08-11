@@ -33,11 +33,4 @@ public class Music {
 		return "Music [title=" + title + ", artist=" + artist + "]";
 	}
 	
-	
-	
-	
-	
-	
-	
-	
 }

@@ -115,9 +115,6 @@ public class ListRun {
 		// 2) 향상된 for문
 		for(Object o : list) { // o = list.get(0) => o = list.get(1)
 			System.out.println(o);
-		}
-		
-		
+		}	
 	}
-
 }

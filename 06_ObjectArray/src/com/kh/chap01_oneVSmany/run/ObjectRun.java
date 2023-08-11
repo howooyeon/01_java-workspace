@@ -91,13 +91,7 @@ public class ObjectRun {
 		}
 		if (bk3.getTitle().equals(search)) {
 			System.out.println(bk3.information());
-		}
-		
-		
-		
-		
-		
-		
+		}				
 		
 	}
 

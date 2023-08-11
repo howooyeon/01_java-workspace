@@ -144,7 +144,6 @@ public class B_Switch {
 		default : System.out.println("반드시 1~12월까지를 입력해야 합니다.");
 		}
 		
-	}
-	
+	}	
 	
 }

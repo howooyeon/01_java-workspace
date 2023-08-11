@@ -41,7 +41,7 @@ public class A_If {
 		 * 
 		 * 
 		 * 
-		 * */
+		 */
 		
 		if(num > 0) {
 			System.out.println("양수다");
@@ -159,14 +159,14 @@ public class A_If {
 		// ex 차은우님은 남학생 입니다.
 		// 단. 성별을 잘못 입력하면 성별을 잘못 입력했습니다.
 		
-		
 		Scanner sc = new Scanner(System.in);
 		System.out.print("이름을 입력하세요 : ");
 		String name = sc.nextLine();
 		System.out.print("성별을 입력하세요 (M/F) : ");
 		char gender = sc.nextLine().charAt(0);
 		
-		/*if(gender == 'm' || gender == 'M') {
+		/*
+		if(gender == 'm' || gender == 'M') {
 			System.out.println(name + " 님은 남학생 입니다.");
 		}
 		else if (gender == 'f' || gender == 'F') {
@@ -175,7 +175,7 @@ public class A_If {
 		else {
 			System.out.println("성별을 잘못 입력했습니다.");
 			}
-			*/
+		*/
 		
 		String result = ""; // 변수를 미리 세팅해둘 때 만드시 초기화 해놓는 습관을 들이자
 		
@@ -216,7 +216,6 @@ public class A_If {
 		 * 단, 참조자료형은 동등 비교시 ==, != 사용시 정상적으로 비교가 안 됨
 		 * 			=> equals() 메소드를 이용해서 비교해야됨
 		 * 			[표현법] 문자열.equals(문자열);
-		 * 
 		 * 
 		 */
 		
