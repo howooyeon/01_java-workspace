@@ -13,7 +13,7 @@ public class A_Array {
 		// 변수라는 것을 이용하게 되면 => 대량의 데이터들을 보관하고자 할 때 각각의 변수를 만들어서 따로 관리
 		
 		// * 배열을 왜 쓰는지
-		/*int num1 = 0;
+		int num1 = 0;
 		int num2 = 1;
 		int num3 = 2;
 		int num4 = 3;
@@ -33,7 +33,6 @@ public class A_Array {
 		
 		// 총합계를 구할 때도 -> 일일이 더해줘야됨 (반복문 안됨)
 		int sum = num1 + num2 + num3 + num4 + num5;
-		*/
 		
 		/*
 		 * 1. 배열 선언(여러개의 값을 보관할 배열을 만들겠다!)
@@ -63,9 +62,10 @@ public class A_Array {
 		 * 배열명[인덱스] = 값;
 		 */
 		
-		// 이거를 반복문으로 표현 가능
+		// 이걸 반복문으로 표현 가능
 		
-		/*arr[0] = 0;
+		/*
+		arr[0] = 0;
 		arr[1] = 1;
 		arr[2] = 2;
 		arr[3] = 3;
@@ -99,6 +99,7 @@ public class A_Array {
 		int [] iArr = new int [5];
 		double[] dArr = new double [3];
 		
+		System.out.println(iArr);
 		System.out.println(dArr);
 		
 		/*
@@ -308,7 +309,6 @@ public class A_Array {
 		//3. 반복문 활용해서 0~ 마지막 인덱스까지 담긴 값을 출력
 		for(int i = 0; i <arr.length; i++) {
 			System.out.println("arr["+ i + "] : " + arr[i]);
-		
 		
 		}
 		

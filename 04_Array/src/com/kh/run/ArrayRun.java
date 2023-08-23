@@ -9,7 +9,7 @@ public class ArrayRun {
 		A_Array a = new A_Array();
 		//a.method1();
 		//a.method2();
-		//a.method3();
+		a.method3();
 		//a.method4();
 		//a.method5();
 		//a.method6();
@@ -24,7 +24,7 @@ public class ArrayRun {
 		//b.method2();
 		//b.method3();
 		//b.method4();
-		b.method5();
+		//b.method5();
 		
 		
 	}
