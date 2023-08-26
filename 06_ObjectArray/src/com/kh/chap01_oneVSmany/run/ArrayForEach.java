@@ -19,7 +19,8 @@ public class ArrayForEach {
 		
 		/*
 		 * [표현법]
-		 * for(순차적으로 접근할 값을 담을 변수 선언 : 순차적으로 접근할 배열 또는 컬렉션) { // 반복횟수 == 배열 또는 컬렉션의 크기
+		 * for(순차적으로 접근할 값을 담을 변수 선언 : 순차적으로 접근할 배열 또는 컬렉션) { 
+		 *  반복횟수 == 배열 또는 컬렉션의 크기
 		 *  반복적으로 실행할 내용
 		 * }
 		 */
@@ -31,7 +32,7 @@ public class ArrayForEach {
 		// 객체배열
 		Phone[] phones = new Phone[3]; // 아직 객체가 만들어진게 아니라 배열만 만들어진 것
 		phones[0] = new Phone("갤럭시", "삼성", 15000000, "S23"); // 객체 생성
-		phones[1] = new Phone("아이폰", "애플", 13000000, "S23");
+		phones[1] = new Phone("아이폰", "애플", 13000000, "15 promax");
 		phones[2] = new Phone("G4", "LG", 11000000, "G4");
 		
 		phones[2].setSeries("1");
@@ -56,7 +57,7 @@ public class ArrayForEach {
 		String search = sc.nextLine();
 		
 		for(int i = 0; i < phones.length; i++) {
-			if(phones[i].getName().equals(search)) {
+			if(phones[i].getName().equals(search)) { // 이렇게..!
 				System.out.println( "가격 : "+ phones[i].getPrice()+ "원");
 			}
 		}

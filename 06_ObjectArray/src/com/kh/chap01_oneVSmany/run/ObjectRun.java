@@ -27,10 +27,16 @@ public class ObjectRun {
 		//[응용] 사용자에게 입력받은 값으로 객체를 생성 후 초기화
 		
 		/*
-		 * Scanner sc = new Scanner(System.in); System.out.print("도서명 : "); String title
-		 * = sc.nextLine(); System.out.print("저자명 : "); String author = sc.nextLine();
-		 * System.out.print("가격 : "); int price = sc.nextInt(); sc.nextLine();
-		 * System.out.print("출판사명 : "); String publisher = sc.nextLine();
+		 * Scanner sc = new Scanner(System.in); 
+		 * System.out.print("도서명 : "); 
+		 * String title = sc.nextLine();
+		 * System.out.print("저자명 : ");
+		 * String author = sc.nextLine();
+		 * System.out.print("가격 : "); 
+		 * int price = sc.nextInt(); 
+		 * sc.nextLine();
+		 * System.out.print("출판사명 : "); 
+		 * String publisher = sc.nextLine();
 		 * 
 		 * Book bk = new Book(title, author, price, publisher);
 		 * 

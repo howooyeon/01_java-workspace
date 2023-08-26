@@ -18,10 +18,6 @@ public class OverrideRun {
 		
 		// 오버라이딩 전 : Object 클래스의 toString() 실행 => 풀클래스명 + @ + 객체의 해쉬코드의 16진수값 리턴
 		// 오버라이딩 후 : Book 클래스의  toString() 실행 => 해당 객체가 가지고 있는 모든 필드값을 한 문자열로 합쳐 리턴
-		
-		
-		
-		
 
 	}
 

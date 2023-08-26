@@ -20,7 +20,8 @@ public class ObjectArrayRun {
 		Phone[] phones = new Phone[3]; // 객체 생성한 것이 아니고 배열을 생성한 것
 		
 		/*
-		 * System.out.println(phones); System.out.println(phones[0]);
+		 * System.out.println(phones); 
+		 * System.out.println(phones[0]);
 		 * phones[0].setName("아이폰");
 		 */
 
@@ -51,7 +52,7 @@ public class ObjectArrayRun {
 
 		for (int i = 0; i < phones.length; i++) {
 			if (phones[i].getName().equals(search)) {
-				System.out.println(phones[i].information()); //
+				System.out.println(phones[i].information());
 			}
 		}
 

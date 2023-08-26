@@ -37,8 +37,6 @@ public class InheritRun /* extends Object */{
 		
 		System.out.println("===========================================");
 		
-		
-		
 		/*
 		 * * 상속의 장점
 		 * - 보다 적은 양의 코드로 새로운 클래스 작성 가능

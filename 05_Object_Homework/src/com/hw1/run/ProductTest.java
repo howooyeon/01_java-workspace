@@ -52,10 +52,7 @@ public class ProductTest {
 		System.out.println("상품명 = " + p3.getProductName());
 		System.out.print("부가세 포함 가격 : ");
 		System.out.println((int)(p3.getPrice() * 1.05));
-		
-		
-		
-		
+
 		
 	}
 

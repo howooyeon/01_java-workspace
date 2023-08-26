@@ -1,4 +1,4 @@
-package com.kh.chap02_objectArray;
+package com.kh.chap02_objectArray.run;
 
 import java.util.ArrayList;
 import java.util.Scanner;
