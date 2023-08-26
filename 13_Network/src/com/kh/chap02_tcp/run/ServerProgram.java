@@ -73,17 +73,16 @@ public class ServerProgram {
 
 		} catch (IOException e) {
 			e.printStackTrace();
-		}finally {
+		} finally {
 			try {
 				// 8) 통신 종료
 				pw.close();
 				br.close();
-				
+
 				server.close();
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-			
 		}
 	}
 

@@ -21,8 +21,7 @@ public class LibraryRun {
 		bList.add(new Magazine("105", "호연이의 OOTD", "인플루언서 장희주", "유리네 책방", 12000, "핫가이 조대현의 샤라웃을 받은 잡지", 2022,11));
 		bList.add(new Book("106", "조준하의 미라클모닝", "샤이걸 성윤찡", "연우 출판사", 6300, "용석이도 2번이나 성공한 미라클모닝"));
 		bList.add(new Book("107", "민정이의 백만가지 요리레시피", "제주도에서 온 상원이", "우리반 출판사", 6300, "제주에서 밥해먹고 사는 일상"));
-		 
-
+		
 		printBooks(bList);
 
 	}
@@ -31,7 +30,7 @@ public class LibraryRun {
 		// 여기서 메뉴열고 구현 시작
 		BookController bc = new BookController();
 		
-		for(Book b:bs) {
+		for(Book b : bs) {
 			System.out.println(b);
 			bc.addBook(b);
 		}
