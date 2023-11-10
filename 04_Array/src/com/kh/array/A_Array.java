@@ -186,7 +186,7 @@ public class A_Array {
 		
 		int[] arr = null;// 아무것도 참조하고 있지 않음
 		
-		System.out.println(arr); // 선언만 한 경우  => 초기화 안 돼 있어서 오류남
+		System.out.println(arr); // 선언만 한 경우  => 초기화 안 돼 있어서 오류남!
 		
 		// null을 가지고 메소드를 호출한다거나 특정 어딘가에 접근하고자 한다면
 		// 항상 오류 발생 ! => NullPointerException
