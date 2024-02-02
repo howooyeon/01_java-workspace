@@ -53,6 +53,7 @@ public class ObjectArrayRun {
 		for (int i = 0; i < phones.length; i++) {
 			if (phones[i].getName().equals(search)) {
 				System.out.println(phones[i].information());
+				System.out.println("구매하고자 하는 휴대폰의 가격은 " + phones[i].getPrice() + " 입니다.");
 			}
 		}
 

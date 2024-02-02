@@ -61,7 +61,7 @@ public class A_UncheckedException {
 			System.out.println("result : " + result);
 		} catch (ArithmeticException e) { // 예외를 낚아챔
 			System.out.println("0으로 나눌 수 없습니다.");
-			e.printStackTrace(); // 강제로 오류난 이력 보고자 할 때 실해앟는 구문
+			e.printStackTrace(); // 강제로 오류난 이력 보고자 할 때 실행하는 구문
 
 		}
 
