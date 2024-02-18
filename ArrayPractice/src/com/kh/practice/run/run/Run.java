@@ -1,4 +1,4 @@
-package com.kh.practice.run;
+package com.kh.practice.run.run;
 
 import com.kh.practice.array.ArrayPractice;
 
