@@ -2,8 +2,6 @@ package com.study.algorithm.level1;
 
 import java.util.Scanner;
 
-import com.study.algorithm.level1.IntStack;
-
 public class IntStackTester {
 
 	public static void main(String[] args) {
@@ -13,7 +11,7 @@ public class IntStackTester {
 		while (true) {
 			System.out.println();
 			System.out.printf("현재 데이터 개수: %d / %d\n", s.size(), s.getCapacity());
-			System.out.print("(1) 푸시 (2) 팝 (3) 피크 (4) 덤프 (0) 종료: ");
+			System.out.print("(1) 푸시 (2) 팝 (3) 피크 (4) 덤프 (5)초기화 (0) 종료: ");
 
 			int menu = stdIn.nextInt();
 			if (menu == 0) {
@@ -53,7 +51,10 @@ public class IntStackTester {
 			case 4:
 				s.dump();
 				break;
-
+			case 5:
+				s.clear();
+				System.out.println("데이터가 초기화 되었습니다.");
+				break;
 			}
 		}
 	}

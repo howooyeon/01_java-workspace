@@ -30,7 +30,7 @@ public class GenericListRun {
 		
 		System.out.println(list.get(0).getArtist()); // 너무 편--안
 		
-		for(Music mu :list) {  // mu => list.get(0) => mu = list.get(1)
+		for(Music mu : list) {  // mu => list.get(0) => mu = list.get(1)
 			System.out.println(mu);
 		}
 		
