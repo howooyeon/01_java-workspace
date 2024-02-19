@@ -1,4 +1,4 @@
-package com.study.algorithm.level1;
+package com.study.algorithm.level1.stack;
 
 import java.util.Scanner;
 
