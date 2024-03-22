@@ -21,9 +21,14 @@ public class ArrayListRun {
 		list.get(0).setSeries("1");
 		
 		int total = 0;
-		for (int i = 0; i < list.size(); i++) {
-			System.out.println(list.get(i).information());
-			total += list.get(i).getPrice();
+//		for (int i = 0; i < list.size(); i++) {
+//			System.out.println(list.get(i).information());
+//			total += list.get(i).getPrice();
+//		}
+		
+		for(Phone p : list) {
+			System.out.println(p.information());
+			total += p.getPrice();
 		}
 		
 		System.out.println("총가격 : " + total + "원 ");
